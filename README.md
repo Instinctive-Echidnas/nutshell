@@ -35,5 +35,10 @@
 + Daniel
 + Nick
 
+## Entity Relationship Diagram (ERD):
+
+![ERD for Instinctive Echidnas](http://url/to/img.png)
+
+
 
 
