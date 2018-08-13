@@ -39,7 +39,7 @@
 
 ![ERD for Instinctive Echidnas](http://url/to/img.png)
 
-- [] Main.js requring login and dashboard and using a conditional to display one and session storage.
+- [ ] Main.js requring login and dashboard and using a conditional to display one and session storage.
 
 
 
