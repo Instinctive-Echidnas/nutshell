@@ -1,3 +1,5 @@
+chat = require("./chat/chat.js");
+
 console.log("Hello main.js");
 
 tempObject  = {
@@ -13,3 +15,5 @@ if (login.userName) {
 } else {
     console.log("Login");
 }
+
+chat.createWindow("Hello");
