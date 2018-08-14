@@ -1,5 +1,7 @@
 // KISS   -- start small.  getting started hardest part.  just do it
 // and refactor later.  make this piece of shit roll down the road with all the parts falling off
+const saveUser = require("./login/loginDataManager.js");
+
 console.log("welcome.js connected");
 
 const welcomeMsg = "<h1>Welcome to Nutshell! Please register/login to continue<br/></h1>";
@@ -48,6 +50,8 @@ btn.addEventListener("click", function displayForm() {
 registerBtn.addEventListener("click", function validate() {
     console.log("Invoke validate function to check if username and email are unique.");
     console.log("creating newCustomerAccount object");
+
+    // store this newCustomerAccount as a user in loginDummy.json
     const newCustomerAccount = {
         "email": document.querySelector("input[name=\"email\"]").value,
         "username": document.querySelector("input[name=\"username\"]").value
