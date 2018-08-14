@@ -1,0 +1,22 @@
+{
+    "employees": [
+        {
+            "id": 1,
+            "name": "Ricky Bruner",
+            "computerId": 3,
+            "departmentId": 5
+        }
+    ],
+    "departments": [
+        {
+            "id": 1,
+            "title": "Web Design"
+        }
+    ],
+    "computers": [
+        {
+            "id": 1,
+            "type": "MacBook Pro 2017"
+        }
+    ]
+  }
