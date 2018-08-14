@@ -1,28 +1,19 @@
 {
-    "users": [
-        { "id": 1, "username": "Steve", "email": "me@me.com" }
-    ],
-    "messages": [
-        { "id": 1, "userId": 1, "message": "What's up?" }
-    ],
-    "news": [
-        {
-            "id": 1,
-            "userId": 2,
-            "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
-            "title": "Wormholes Allow Information to Escape Black Holes",
-            "synopsis": "Check out this recent discovery about workholes"
-        }
-    ],
-    "friends": [
-        { "connectionId": 1, "userId": 1, "friendId": 3 }
-    ],
-    "tasks": [
-        { "id": 1, "userId": 3, "task": "Take out garbage" }
-    ],
-    "events": [
-        { "id": 1, "eventTitle": 3, "eventContent": "Take out garbage", "eventDate": "August 14, 2018" },
-        { "id": 1, "eventTitle": 4, "eventContent": "Cut the grass", "eventDate": "August 14, 2018" },
-        { "id": 1, "eventTitle": 5, "eventContent": "Drink More Water", "eventDate": "August 14, 2018" }
-    ]
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
   }
+}
