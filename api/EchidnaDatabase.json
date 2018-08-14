@@ -1,22 +1,50 @@
 {
-    "employees": [
+    "users": [
         {
             "id": 1,
-            "name": "Ricky Bruner",
-            "computerId": 3,
-            "departmentId": 5
+            "username": "FirstName LastName",
+            "email": "somethign@something.com",
+            "password": "ergfsdfg34w534"
         }
     ],
-    "departments": [
+    "friends": [
         {
             "id": 1,
-            "title": "Web Design"
+            "userId": 1,
+            "friendid": 2
         }
     ],
-    "computers": [
+    "messages": [
         {
             "id": 1,
-            "type": "MacBook Pro 2017"
+            "userId": 1,
+            "message": "This is the chat message text."
+        }
+    ],
+    "news": [
+        {
+            "id": 1,
+            "title": "Title of the News",
+            "synopsis": "Synopsis of the News",
+            "url": "URL address",
+            "userId": 1
+        }
+    ],
+    "events": [
+        {
+            "id": 1,
+            "event": "Name of the Event",
+            "date": 234124214214,
+            "locaton": "555 Somewhere Avenue",
+            "userId": 1
+        }
+    ],
+    "tasks": [
+        {
+            "id": 1,
+            "userId": 1,
+            "task": "This is the listed task.",
+            "taskstatus": false
         }
     ]
-  }
+}
