@@ -1,3 +1,4 @@
+const chat = require("./chat/chat.js");
 const welcome = require("./login/welcome.js");
 
 console.log("Hello main.js");
