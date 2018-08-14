@@ -35,11 +35,11 @@
 + Daniel
 + Nick
 
-## Entity Relationship Diagram (ERD):
+### Entity Relationship Diagram (ERD):
 
 ![ERD for Instinctive Echidnas](https://github.com/Instinctive-Echidnas/nutshell/blob/master/images/erd.png)
 
-## Dependency Tree
+### Dependency Tree
 
 ![dependency tree for Instinctive Echidnas](https://github.com/Instinctive-Echidnas/nutshell/blob/master/images/dependencyTree.jpg)
 
