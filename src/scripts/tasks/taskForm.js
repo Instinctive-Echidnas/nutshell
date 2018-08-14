@@ -6,11 +6,11 @@ function renderTaskForm(){
             <div class="task-form">
                 <fieldset id="taskFormWrapper">
                 <label for="taskForm" id="taskForm">Tasks:</label>
-                <input required type="text" id="taskForm">
+                <input required type="text" id="taskFormInput">
                 </fieldset>
                 <fieldset id="taskDateWrapper">
                 <label for="taskDate" id="taskDate">Goal Date:</label>
-                <input required type="date" id="taskDate">
+                <input required type="date" id="taskGoalDate">
                 </fieldset>
     <button id="saveTaskButton">Save Task</button>
             </div>
@@ -18,6 +18,6 @@ function renderTaskForm(){
 
 }
 
-renderTaskForm();
+// renderTaskForm();
 
 module.exports = renderTaskForm

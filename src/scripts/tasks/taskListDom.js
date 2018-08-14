@@ -1,8 +1,11 @@
 "use strict"
 
-function renderTaskList() {
-    return `
+function renderTaskList(task) {
+    return `<div id="taskListWrapper">
+            <h2 id="taskName--${task.id}">${task.name}</h2> 
+            <input type="checkbox" name="task" value="taskcomplete">
+        </div>`
     
-    <input type="checkbox" name="task" value="taskcomplete">`
-
 }
+
+module.export = renderTaskList
