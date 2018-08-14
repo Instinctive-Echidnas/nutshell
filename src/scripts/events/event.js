@@ -1,7 +1,7 @@
 const entryComponent = require("events/eventForm.js");
 const eventList = require("events/eventList.js")
 const addButton = document.querySelector("#eventForm");
-const dataManager = require("../eventdataManager.js")
+const dataManager = require("events/eventdataManager.js")
 
 // console.log(dataManager.getAllEvents());
 const listEvents = () => {

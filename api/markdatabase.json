@@ -22,7 +22,7 @@
     ],
     "events": [
         { "id": 1, "eventTitle": 3, "eventContent": "Take out garbage", "eventDate": "August 14, 2018" },
-        { "id": 1, "eventTitle": 4, "eventContent": "Cut the grass", "eventDate": "August 14, 2018" },
-        { "id": 1, "eventTitle": 5, "eventContent": "Drink More Water", "eventDate": "August 14, 2018" }
+        { "id": 2, "eventTitle": 4, "eventContent": "Cut the grass", "eventDate": "August 14, 2018" },
+        { "id": 3, "eventTitle": 5, "eventContent": "Drink More Water", "eventDate": "August 14, 2018" }
     ]
   }

@@ -1,21 +1,21 @@
-// const welcome = require("./login/welcome.js");
+const welcome = require("./login/welcome.js");
 const events = require("events/event.js");
-// origin;
+origin;
 events;
 
-// console.log("Hello main.js");
+console.log("Hello main.js");
 
-// tempObject  = {
-//     userName: false
-// }
+tempObject  = {
+    userName: false
+}
 
-// sessionStorage.setItem("session", JSON.stringify(tempObject));
+sessionStorage.setItem("session", JSON.stringify(tempObject));
 
-// let login = JSON.parse(sessionStorage.getItem("session"));
+let login = JSON.parse(sessionStorage.getItem("session"));
 
-// if (login.userName) {
-//     console.log("Dashboard");
-// } else {
-//     console.log("Login: invoking welcome function inside of welcome module");
-//     welcome();
-// }
+if (login.userName) {
+    console.log("Dashboard");
+} else {
+    console.log("Login: invoking welcome function inside of welcome module");
+    welcome();
+}

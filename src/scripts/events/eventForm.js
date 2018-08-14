@@ -7,7 +7,6 @@ renderEventForm = `
                 <label for="eventsContent">Event Description</label>
                 <textarea id="eventDescription"
                           placeholder="Your thoughts"
-                          rows="10"
                 >
                 </textarea>
             </fieldset>

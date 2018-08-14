@@ -1,8 +1,8 @@
 // KISS   -- start small.  getting started hardest part.  just do it
 // and refactor later.  make this piece of shit roll down the road with all the parts falling off
-// console.log("welcome.js connected");
+console.log("welcome.js connected");
 
-// const welcomeMsg = "<h1>Welcome to Nutshell! Please register/login to continue<br/></h1>";
+const welcomeMsg = "<h1>Welcome to Nutshell! Please register/login to continue<br/></h1>";
 
 // button for register a new account to display register form on click
 const btn = document.createElement("button");
