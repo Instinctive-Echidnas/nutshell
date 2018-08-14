@@ -1,3 +1,9 @@
 body {
     background-color: black;
+    color: white;
+}
+
+#chatWindow {
+    width: 50%;
+    margin: auto;
 }
