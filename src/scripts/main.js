@@ -1,3 +1,4 @@
+const chat = require("./chat/chat.js");
 const welcome = require("./login/welcome.js");
 
 console.log("Hello main.js");
@@ -16,3 +17,5 @@ if (login.userName) {
     console.log("Login: invoking welcome function inside of welcome module");
     welcome();
 }
+
+chat.createWindow();
