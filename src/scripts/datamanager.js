@@ -13,12 +13,12 @@ const eventDataManager = Object.create(null, {
     },
     getAllEvents: {
         value: () => {
-            return fetch("http://localhost:8088/entries?_order=desc&_sort=date").then(r => r.json())
+            return fetch("http://localhost:8088/events").then(r => r.json())
         }
     },
     deleteEvent: {
         value: (id) => {
-            return fetch(`http://localhost:8088/entries/${id}`, {
+            return fetch(`http://localhost:8088/events/${id}`, {
                 method: "DELETE"
             })
                 .then(r => r.json())
