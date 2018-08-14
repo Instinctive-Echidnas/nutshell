@@ -30,10 +30,10 @@
 
 # Instinctive-Echidnas Nutshell project
 
-+ Mark
-+ Helen
-+ Daniel
-+ Nick
++ Mark :rage3:
++ Helen :princess:
++ Daniel :guardsman:
++ Nick :neckbeard:
 
 ### Entity Relationship Diagram (ERD):
 
