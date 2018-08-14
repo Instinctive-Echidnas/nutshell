@@ -1,3 +1,6 @@
+const events = require("events/event.js");
+events;
+
 console.log("Hello main.js");
 
 tempObject  = {
