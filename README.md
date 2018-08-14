@@ -37,7 +37,12 @@
 
 ## Entity Relationship Diagram (ERD):
 
-![ERD for Instinctive Echidnas](http://url/to/img.png)
+![ERD for Instinctive Echidnas](https://github.com/Instinctive-Echidnas/nutshell/blob/master/images/erd.png)
 
+## Dependency Tree
+
+![dependency tree for Instinctive Echidnas](https://github.com/Instinctive-Echidnas/nutshell/blob/master/images/dependencyTree.jpg)
 
 - [ ] Main.js requring login and dashboard and using a conditional to display one and session storage.
+
+- [ ] Login Page -- Nick
