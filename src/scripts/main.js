@@ -1,4 +1,6 @@
+const welcome = require("./login/welcome.js");
 const events = require("events/event.js");
+origin;
 events;
 
 console.log("Hello main.js");
@@ -14,5 +16,6 @@ let login = JSON.parse(sessionStorage.getItem("session"));
 if (login.userName) {
     console.log("Dashboard");
 } else {
-    console.log("Login");
+    console.log("Login: invoking welcome function inside of welcome module");
+    welcome();
 }
