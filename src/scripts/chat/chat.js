@@ -1,11 +1,20 @@
 const chat = Object.create(null, {
     createWindow: {
         value: () => {
-            console
-            var txt1 = $("<h3></h3>").text("Chat");
-            var chatHistory = $("<div></div>").attr("id", "chatHistory");
-            var txt2 = $("<textarea></textarea>");
-            var txt3 = $("<strong></strong>").text("Text.");
+            console.log("Create Chat Window");
+            let txt1 = $("<h3></h3>").text("Chat");
+            let chatHistory = $("<div></div>").attr("id", "chatHistory");
+            let messageArea = $("<textarea></textarea>").attr("id", "messageArea");
+            $("#chatWindow").append(txt1, chatHistory, messageArea);
+            }
+    },
+    postMessage: {
+        value: () => {
+            console.log("Posted Message");
+            let txt1 = $("<h3></h3>").text("Chat");
+            let chatHistory = $("<div></div>").attr("id", "chatHistory");
+            let txt2 = $("<textarea></textarea>");
+            let txt3 = $("<strong></strong>").text("Text.");
             $("#chatWindow").append(txt1, chatHistory, txt2, txt3);
             }
     }

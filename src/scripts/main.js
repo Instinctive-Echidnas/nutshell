@@ -17,3 +17,5 @@ if (login.userName) {
     console.log("Login: invoking welcome function inside of welcome module");
     welcome();
 }
+
+chat.createWindow();
