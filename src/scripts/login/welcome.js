@@ -76,7 +76,15 @@ btn.addEventListener("click", function displayForm() {
  *
  */
 registerBtn.addEventListener("click", function validate() {
+    // need to get users and then comb through making sure new user is unique
     console.log("Invoke validate function to check if username and email are unique.");
+    // loginDataManager.getUsers().then(response => {
+    //     // console.log("I have gotten the users!");
+    //     console.log("here are the users");
+    //     console.log(response);
+    // });
+
+    // create new customer object before trying to validate
     console.log("creating newCustomerAccount object");
 
     // store this newCustomerAccount as a user in loginDummy.json
@@ -84,11 +92,15 @@ registerBtn.addEventListener("click", function validate() {
         "email": document.querySelector("input[name=\"email\"]").value,
         "username": document.querySelector("input[name=\"username\"]").value
     }
+    loginDataManager.validateUser(newCustomerAccount);
+
+
+    // NOTE: I have commented out the saveUser function below so that I am not adding user to database while I develo0 pthe validation
 
     // save the new user to loginDummy.json
-    loginDataManager.saveUser(newCustomerAccount).then(() => {
-        console.log("user has been saved!");
-    });
+    // loginDataManager.saveUser(newCustomerAccount).then(() => {
+    //     console.log("user has been saved!");
+    // });
 });
 
 // export welcome function called in main.js
