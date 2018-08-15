@@ -86,7 +86,7 @@ registerBtn.addEventListener("click", function validate() {
     }
 
     // save the new user to loginDummy.json
-    loginDataManager(newCustomerAccount).then(() => {
+    loginDataManager.saveUser(newCustomerAccount).then(() => {
         console.log("user has been saved!");
     });
 });
