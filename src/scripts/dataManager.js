@@ -18,7 +18,7 @@ const APItasksContent = Object.create (null, {
     //get task from the API
         getEntries: {
             value: () => {
-                return fetch("http://localhost:8088/entries?_order=desc&_sort=id")
+                return fetch("http://localhost:8088/tasks?taskStatus=true")
                 .then(response => response.json());
             }
         },
@@ -28,7 +28,7 @@ const APItasksContent = Object.create (null, {
     // this deletes the task in the API
     deleteEntries: {
         value: (ID) => {
-            return fetch(`http://localhost:8088/entries/${ID}`,{
+            return fetch(`http://localhost:8088/tasks/${ID}`,{
             method: "DELETE"
             
             })
@@ -40,7 +40,7 @@ const APItasksContent = Object.create (null, {
     replaceEntry: {
         value: (ID) => {
             
-            return fetch(`http://localhost:8088/entries/${ID}`, {
+            return fetch(`http://localhost:8088/tasks/${ID}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"

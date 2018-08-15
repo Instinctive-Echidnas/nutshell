@@ -1,3 +1,13 @@
-/* body {
+body {
     background-color: white;
-} */
+    color: black;
+}
+
+#chatWindow {
+    width: 50%;
+    margin: auto;
+}
+
+#taskSaveButton {
+    background-color: rgb(8, 170, 245);
+}
