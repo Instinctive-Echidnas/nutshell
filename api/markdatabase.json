@@ -1,28 +1,95 @@
 {
-    "users": [
-        { "id": 1, "username": "Steve", "email": "me@me.com" }
-    ],
-    "messages": [
-        { "id": 1, "userId": 1, "message": "What's up?" }
-    ],
-    "news": [
-        {
-            "id": 1,
-            "userId": 2,
-            "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
-            "title": "Wormholes Allow Information to Escape Black Holes",
-            "synopsis": "Check out this recent discovery about workholes"
-        }
-    ],
-    "friends": [
-        { "connectionId": 1, "userId": 1, "friendId": 3 }
-    ],
-    "tasks": [
-        { "id": 1, "userId": 3, "task": "Take out garbage" }
-    ],
-    "events": [
-        { "id": 1, "eventTitle": 3, "eventContent": "Take out garbage", "eventDate": "August 14, 2018" },
-        { "id": 2, "eventTitle": 4, "eventContent": "Cut the grass", "eventDate": "August 14, 2018" },
-        { "id": 3, "eventTitle": 5, "eventContent": "Drink More Water", "eventDate": "August 14, 2018" }
-    ]
-  }
+  "users": [
+    {
+      "id": 1,
+      "username": "Steve",
+      "email": "me@me.com"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "userId": 1,
+      "message": "What's up?"
+    }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "userId": 2,
+      "url": "https://www.quantamagazine.org/newfound-wormhole-allows-information-to-escape-black-holes-20171023/",
+      "title": "Wormholes Allow Information to Escape Black Holes",
+      "synopsis": "Check out this recent discovery about workholes"
+    }
+  ],
+  "friends": [
+    {
+      "connectionId": 1,
+      "userId": 1,
+      "friendId": 3
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "userId": 3,
+      "task": "Take out garbage"
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "eventTitle": 3,
+      "eventContent": "Take out garbage",
+      "eventDate": "August 14, 2018"
+    },
+    {
+      "id": 2,
+      "eventTitle": 4,
+      "eventContent": "Cut the grass",
+      "eventDate": "August 14, 2018"
+    },
+    {
+      "id": 3,
+      "eventTitle": 5,
+      "eventContent": "Drink More Water",
+      "eventDate": "August 14, 2018"
+    },
+    {
+      "eventTitle": "hello",
+      "eventContent": "world                ",
+      "eventDate": "Wed Aug 15 2018 10:23:00 GMT-0500 (Central Daylight Time)",
+      "id": 4
+    },
+    {
+      "eventTitle": "hello",
+      "eventContent": "world                ",
+      "eventDate": "Wed Aug 15 2018 10:23:47 GMT-0500 (Central Daylight Time)",
+      "id": 5
+    },
+    {
+      "eventTitle": "hello",
+      "eventContent": "     world           ",
+      "eventDate": "Wed Aug 15 2018 10:24:29 GMT-0500 (Central Daylight Time)",
+      "id": 6
+    },
+    {
+      "eventTitle": "Sammy",
+      "eventContent": "likes pie quite a lot                ",
+      "eventDate": "Wed Aug 15 2018 10:25:52 GMT-0500 (Central Daylight Time)",
+      "id": 7
+    },
+    {
+      "eventTitle": "megadeth",
+      "eventContent": "eye of the tornado, blow me away                ",
+      "eventDate": "Wed Aug 15 2018 10:28:04 GMT-0500 (Central Daylight Time)",
+      "id": 8
+    },
+    {
+      "eventTitle": "what",
+      "eventContent": "is for me to be                ",
+      "eventDate": 1534346931204,
+      "id": 9
+    }
+  ]
+}

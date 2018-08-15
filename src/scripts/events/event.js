@@ -3,7 +3,7 @@ const eventList = require("events/eventList.js")
 const addButton = document.querySelector("#eventForm");
 const dataManager = require("events/eventdataManager.js")
 
-// console.log(dataManager.getAllEvents());
+//list all of the events currently in the database
 const listEvents = () => {
     dataManager.getAllEvents().then(entry => eventList(entry))
 }
@@ -15,6 +15,21 @@ addButton.addEventListener("click",()=>{
     let placeHolderDiv = document.createElement("div");
     placeHolderDiv.innerHTML=entryComponent;
     eventSectionDiv.appendChild(placeHolderDiv);
+    document.querySelector("#saveEventButton").addEventListener("click", () => {
+        // Get form field values
+        // Create object from them
+        // Add timestamp
+        const newEvent = {
+            eventTitle: document.querySelector("#entryTitle").value,
+            eventContent: document.querySelector("#eventDescription").value,
+            eventDate: Date(Date.now())
+        }
+        dataManager.saveEventEntry(newEvent)
+            .then(() => {
+                // Clear the form fields
+                entryComponent.clearForm
+                listEvents()
+            })
+    })
 });
-
 module.exports = addButton;

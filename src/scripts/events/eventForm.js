@@ -1,3 +1,4 @@
+clearEventForm = "";
 renderEventForm = `
             <fieldset class="eventsField">
                 <label for="eventTitle">Title</label>
@@ -10,11 +11,7 @@ renderEventForm = `
                 >
                 </textarea>
             </fieldset>
-            <fieldset class="eventsField">
-                <label for="eventDate">Date</label>
-                <input required type="text" id="entryDate" placeholder="Event Date">
-            </fieldset>
-            <button id="saveEventButton">Save Event Entry</button>
+            <button id="saveEventButton">Save Event</button>
         `
 
 module.exports = renderEventForm;
