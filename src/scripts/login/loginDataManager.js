@@ -22,9 +22,40 @@ const loginDataManager = Object.create(null, {
 
     validateUser: {
         value: (user) => {
-            // does this need to be loginDataManager.getUsers() to invoke here?
-            getUsers().then(response => {
-                console.log("I have gotten the users!");
+            // vars for user email and name from the API/DB
+            let userEmail = "";
+            let userName = "";
+
+            // vars for user object passed in as argument
+            let name = user.username;
+            let email = user.email;
+
+            // var to account if user exists or not
+            let userExists = false;
+
+            // get users first in order to search through them for user passed in
+            loginDataManager.getUsers().then(response => {
+                // response now is a reference to the users
+                response.forEach(element => {
+                    userEmail = element.email;
+                    userName = element.username;
+
+                    // i want to use toUpperCase so that email and usernames are not case sensitive
+                    if ((email.toUpperCase() === userEmail.toUpperCase()) || (name.toUpperCase() === userName.toUpperCase())) {
+                        // change userExists to true and break or return
+                        userExists = true;
+                        console.log("username or email already exists; please try again!");
+                    }
+                }); // forEach
+
+                // let us check if userExists is false and create user if so
+                if (!(userExists)) {
+                    // userExists = false, we can create user.
+                    console.log("user doesn't exist so creating them");
+                    loginDataManager.saveUser(user).then(() => {
+                        console.log(user + " user has been saved!");
+                    });
+                }
             });
         }
     }

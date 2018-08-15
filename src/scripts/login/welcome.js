@@ -70,35 +70,29 @@ btn.addEventListener("click", function displayForm() {
     // attach a register button to form and an event listener
 });
 
-/** Event listener for registerBtn
+/** Event listener for registerBtn -- Validate, Register, Dashboard
  *
  * Purpose:  on click, invoke validate function to check if username and email address are unique.  If they are, create a new user and store the user in loginDummy.json.  After this, the user would be taken to the dashboard.
  *
  */
 registerBtn.addEventListener("click", function validate() {
-    // need to get users and then comb through making sure new user is unique
-    console.log("Invoke validate function to check if username and email are unique.");
-    // loginDataManager.getUsers().then(response => {
-    //     // console.log("I have gotten the users!");
-    //     console.log("here are the users");
-    //     console.log(response);
-    // });
-
-    // create new customer object before trying to validate
-    console.log("creating newCustomerAccount object");
-
-    // store this newCustomerAccount as a user in loginDummy.json
-    const newCustomerAccount = {
+    // create a new customer account to validate and store if unique
+    const newCustomer = {
         "email": document.querySelector("input[name=\"email\"]").value,
         "username": document.querySelector("input[name=\"username\"]").value
     }
-    loginDataManager.validateUser(newCustomerAccount);
 
+    // console.log("Testing output of newCustomer object");
+    // console.log(newCustomer.email);
+    // console.log(newCustomer.username);
 
-    // NOTE: I have commented out the saveUser function below so that I am not adding user to database while I develo0 pthe validation
+    // validate the new user and test if unique
+    loginDataManager.validateUser(newCustomer);
+
+    // NOTE: I have commented out the saveUser function below so that I am not adding user to database while I develop the validation
 
     // save the new user to loginDummy.json
-    // loginDataManager.saveUser(newCustomerAccount).then(() => {
+    // loginDataManager.saveUser(newCustomer).then(() => {
     //     console.log("user has been saved!");
     // });
 });
