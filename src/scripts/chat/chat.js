@@ -1,3 +1,28 @@
+const savechatMessage = (entry) => {
+    return fetch("http://localhost:8088/messages", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(entry)
+    })
+}
+const getchatMessages = () => {
+    return fetch("http://localhost:8088/messages?_order=desc&_sort=date")
+    .then(response => response.json())
+}
+const deletechatMessage = (entry) => {
+    return fetch(`http://localhost:8088/messages/${entry}`, {
+        method: "DELETE",
+    })
+    .then(response => response.json())
+}
+
+const editchatMessage = (id) => {
+    return fetch(`http://localhost:8088/messages/${id}`)
+    .then(response => response.json())
+}
+
 const chat = Object.create(null, {
     createWindow: {
         value: () => {
@@ -5,44 +30,72 @@ const chat = Object.create(null, {
             let txt1 = $("<h3></h3>").text("Chat");
             let chatHistory = $("<div></div>").attr("id", "chatHistory");
             let messageArea = $("<textarea></textarea>").attr("id", "messageArea");
-            $("#chatWindow").append(txt1, chatHistory, messageArea);
-            }
+            let postButton = $("<button></button>").attr("id", "postButton");
+            $("#chatWindow").append(txt1, chatHistory, messageArea, postButton);
+            getchatMessages().then((response) => {
+                response.reverse().forEach((element, index) => {
+                    let messageBox = $("<div></div>").attr("id", `messageBox--${index}`).attr("class", "messages");
+                    let messageArea = $("<div></div>").attr("class", "chatMessage").text(`${element.message}`);
+                    let userBox = $("<div></div>").attr("class", "userName").text(`${element.userId}`);
+                    $(messageBox).append(userBox, messageArea);
+                    $("#chatHistory").append(messageBox);
+                    $("#chatHistory").scrollTop($("#chatHistory")[0].scrollHeight)
+                });
+            })
+        }
     },
     postMessage: {
         value: () => {
-            console.log("Posted Message");
-            let txt1 = $("<h3></h3>").text("Chat");
-            let chatHistory = $("<div></div>").attr("id", "chatHistory");
-            let txt2 = $("<textarea></textarea>");
-            let txt3 = $("<strong></strong>").text("Text.");
-            $("#chatWindow").append(txt1, chatHistory, txt2, txt3);
+            const newEntry = {
+                userId: 5,
+                message: document.querySelector("#messageArea").value,
+                date: Date.now(),
             }
+            savechatMessage(newEntry)
+            .then(() => {
+                document.querySelector("#chatHistory").value = "";
+                document.querySelector("#messageArea").value = "";
+            })
+            .then(() => {return getchatMessages()})
+            .then((result) => {
+                document.querySelector("#chatHistory").innerHTML = "";
+                result.reverse().forEach((element, index) => {
+                    let messageBox = $("<div></div>").attr("id", `messageBox--${index}`).attr("class", "messages");
+                    let messageArea = $("<div></div>").attr("class", "chatMessage").text(`${element.message}`);
+                    let userBox = $("<div></div>").attr("class", "userName").text(`${element.userId}`);
+                    $(messageBox).append(userBox, messageArea);
+                    $("#chatHistory").append(messageBox);
+                    $("#chatHistory").scrollTop($("#chatHistory")[0].scrollHeight)
+                })
+            })
+        }
+    },
+    editMessage: {
+        value: () => {
+            const newEntry = {
+                userId: 5,
+                message: document.querySelector("#messageArea").value,
+                date: Date.now(),
+            }
+            savechatMessage(newEntry)
+            .then(() => {
+                document.querySelector("#chatHistory").value = "";
+                document.querySelector("#messageArea").value = "";
+            })
+            .then(() => {return getchatMessages()})
+            .then((result) => {
+                document.querySelector("#chatHistory").innerHTML = "";
+                result.reverse().forEach((element, index) => {
+                    let messageBox = $("<div></div>").attr("id", `messageBox--${index}`).attr("class", "messages");
+                    let messageArea = $("<div></div>").attr("class", "chatMessage").text(`${element.message}`);
+                    let userBox = $("<div></div>").attr("class", "userName").text(`${element.userId}`);
+                    $(messageBox).append(userBox, messageArea);
+                    $("#chatHistory").append(messageBox);
+                    $("#chatHistory").scrollTop($("#chatHistory")[0].scrollHeight)
+                })
+            })
+        }
     }
 })
 
-// const formManager = Object.create(null, {
-//     clearForm: {
-//         value: () => {
-//             document.querySelector("#journalTitleInput").value = "";
-//             document.querySelector("#journalTextInput").value = "";
-//         }
-//     },
-//     makeForm: {
-//         value: () => {
-//             console.log("Form function invoked");
-//             return `
-//             <fieldset>
-//                 <label for="journalTitle">Journal Title:</label>
-//                 <br>
-//                 <input required type="text" id="journalTitleInput">
-//             </fieldset>
-//             <fieldset>
-//                 <label for="journalText">Journal Text:</label>
-//                 <br>
-//                 <textarea id="journalTextInput"></textarea>
-//             </fieldset>
-//             <button id="saveEntryButton">Save Journal Entry</button>
-//             `}
-//         }
-// })
 module.exports = chat

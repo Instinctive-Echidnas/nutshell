@@ -19,3 +19,10 @@ if (login.userName) {
 }
 
 chat.createWindow();
+
+document.querySelector("body").addEventListener("click", (evt) => {
+    let x = evt.target.id;
+    if (x === "postButton") {
+        chat.postMessage();
+    }
+})
