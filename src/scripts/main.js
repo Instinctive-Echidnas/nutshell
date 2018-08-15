@@ -1,10 +1,12 @@
-const chat = require("./chat/chat.js");
+// const chat = require("./chat/chat.js");
 const welcome = require("./login/welcome.js");
+const dashboard = require("./dashboard/dashboard.js");
 
-console.log("Hello main.js");
+// console.log("Hello main.js");
 
+// set to true in order to go to dashboard and false to go to welcome/registration
 tempObject  = {
-    userName: false
+    userName: true
 }
 
 sessionStorage.setItem("session", JSON.stringify(tempObject));
@@ -13,9 +15,10 @@ let login = JSON.parse(sessionStorage.getItem("session"));
 
 if (login.userName) {
     console.log("Dashboard");
+    dashboard();
 } else {
-    console.log("Login: invoking welcome function inside of welcome module");
+    console.log("Welcome/Registration");
     welcome();
 }
 
-chat.createWindow();
+// chat.createWindow();

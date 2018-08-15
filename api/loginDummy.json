@@ -1,3 +1,24 @@
 {
-    "users": []
+  "users": [
+    {
+      "email": "mike@frog.com",
+      "username": "mike",
+      "id": 1
+    },
+    {
+      "email": "nick@nick.com",
+      "username": "foobar",
+      "id": 2
+    },
+    {
+      "email": "jimmy@jim.com",
+      "username": "jimmy",
+      "id": 3
+    },
+    {
+      "email": "tesetUser@cent.com",
+      "username": "testUser",
+      "id": 4
+    }
+  ]
 }

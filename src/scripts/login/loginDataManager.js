@@ -55,6 +55,9 @@ const loginDataManager = Object.create(null, {
                     loginDataManager.saveUser(user).then(() => {
                         console.log(user + " user has been saved!");
                     });
+
+                    // take user to Dashboard
+
                 }
             });
         }
