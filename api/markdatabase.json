@@ -19,13 +19,55 @@
       "email": "sup",
       "username": "bro",
       "id": 4
+    },
+    {
+      "email": "jkbkjbjkbkjb",
+      "username": "fcfcyitcitygvuov",
+      "id": 5
     }
   ],
   "messages": [
     {
-      "id": 1,
-      "userId": 1,
-      "message": "What's up?"
+      "userId": 5,
+      "message": "1",
+      "date": 1534449515553,
+      "id": 1
+    },
+    {
+      "userId": 5,
+      "message": "2",
+      "date": 1534449516651,
+      "id": 2
+    },
+    {
+      "userId": 5,
+      "message": "3",
+      "date": 1534449517543,
+      "id": 3
+    },
+    {
+      "userId": 5,
+      "message": "4",
+      "date": 1534449518432,
+      "id": 4
+    },
+    {
+      "userId": 5,
+      "message": "5",
+      "date": 1534449519329,
+      "id": 5
+    },
+    {
+      "userId": 5,
+      "message": "6",
+      "date": 1534449520293,
+      "id": 6
+    },
+    {
+      "userId": 5,
+      "message": "sup",
+      "date": 1534462898294,
+      "id": 7
     }
   ],
   "news": [],
@@ -36,14 +78,15 @@
       "friendId": 3
     }
   ],
-  "tasks": [],
-  "events": [
+  "tasks": [
     {
-      "eventTitle": "hello",
-      "eventContent": "goodbye",
-      "eventDate": "2018-08-24",
-      "id": 4
-    },
+      "task": "nlknln",
+      "taskGoalDate": "2018-08-21",
+      "taskStatus": false,
+      "id": 1
+    }
+  ],
+  "events": [
     {
       "eventTitle": "sup",
       "eventContent": "dude",
@@ -67,6 +110,12 @@
       "eventContent": "bro",
       "eventDate": "2018-08-21",
       "id": 12
+    },
+    {
+      "eventTitle": "hello",
+      "eventContent": "my stuff works",
+      "eventDate": "2018-08-24",
+      "id": 13
     }
   ]
 }

@@ -1,49 +1,133 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "username": "FirstName LastName",
-            "email": "somethign@something.com"
-        }
-    ],
-    "friends": [
-        {
-            "id": 1,
-            "userId": 1,
-            "friendid": 2
-        }
-    ],
-    "messages": [
-        {
-            "id": 1,
-            "userId": 1,
-            "message": "This is the chat message text."
-        }
-    ],
-    "news": [
-        {
-            "id": 1,
-            "title": "Title of the News",
-            "synopsis": "Synopsis of the News",
-            "url": "URL address",
-            "userId": 1
-        }
-    ],
-    "events": [
-        {
-            "id": 1,
-            "event": "Name of the Event",
-            "date": 234124214214,
-            "locaton": "555 Somewhere Avenue",
-            "userId": 1
-        }
-    ],
-    "tasks": [
-        {
-            "id": 1,
-            "userId": 1,
-            "task": "This is the listed task.",
-            "taskstatus": false
-        }
-    ]
+  "users": [
+    {
+      "email": "mike@frog.com",
+      "username": "mike",
+      "id": 1
+    },
+    {
+      "email": "nick@nick.com",
+      "username": "foobar",
+      "id": 2
+    },
+    {
+      "email": "jimmy@jim.com",
+      "username": "jimmy",
+      "id": 3
+    },
+    {
+      "email": "tesetUser@cent.com",
+      "username": "testUser",
+      "id": 4
+    },
+    {
+      "email": "Something@something.net",
+      "username": "SomethingSomethingDarkSide",
+      "id": 5
+    },
+    {
+      "email": "Somethingelse@something.net",
+      "username": "SomethingelseSomethingDarkSide",
+      "id": 6
+    },
+    {
+      "email": "zxcvxzv@dsfasf",
+      "username": "sdfsaf",
+      "id": 7
+    },
+    {
+      "email": "asedfsadfsad",
+      "username": "asdfsafsaf",
+      "id": 8
+    },
+    {
+      "email": "11111",
+      "username": "111111",
+      "id": 9
+    }
+  ],
+  "friends": [],
+  "messages": [
+    {
+      "userId": 5,
+      "message": "1",
+      "date": 1534449515553,
+      "id": 1
+    },
+    {
+      "userId": 5,
+      "message": "2",
+      "date": 1534449516651,
+      "id": 2
+    },
+    {
+      "userId": 5,
+      "message": "3",
+      "date": 1534449517543,
+      "id": 3
+    },
+    {
+      "userId": 5,
+      "message": "4",
+      "date": 1534449518432,
+      "id": 4
+    },
+    {
+      "userId": 5,
+      "message": "5",
+      "date": 1534449519329,
+      "id": 5
+    },
+    {
+      "userId": 5,
+      "message": "6",
+      "date": 1534449520293,
+      "id": 6
+    },
+    {
+      "userId": 5,
+      "message": "hello",
+      "date": 1534463287776,
+      "id": 7
+    },
+    {
+      "userId": 5,
+      "message": "hello",
+      "date": 1534463300804,
+      "id": 8
+    },
+    {
+      "userId": 5,
+      "message": "sup",
+      "date": 1534463405982,
+      "id": 9
+    }
+  ],
+  "events": [
+    {
+      "eventTitle": "there",
+      "eventContent": "there",
+      "eventDate": "2018-08-18",
+      "id": 6
+    },
+    {
+      "eventTitle": "hello",
+      "eventContent": "hi there",
+      "eventDate": "2018-08-14",
+      "id": 7
+    },
+    {
+      "eventTitle": "sup",
+      "eventContent": "bro",
+      "eventDate": "2018-08-21",
+      "id": 12
+    },
+    {
+      "eventTitle": "hello",
+      "eventContent": "my stuff works",
+      "eventDate": "2018-08-24",
+      "id": 13
+    }
+  ],
+  "tasks": []
 }

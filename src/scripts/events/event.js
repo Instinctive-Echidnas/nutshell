@@ -80,10 +80,10 @@ document.querySelector("#eventSection").addEventListener("click", evt => {
 //adds event listener to the add new event button, which brings up a form for the user to add event details
 addButton.addEventListener("click",()=>{
     //creates a new div element to hold the event form
-    eventSectionDiv = document.querySelector("#eventSection");
+    eventDiv = document.querySelector("#eventSection");
     let placeHolderDiv = document.createElement("div");
     placeHolderDiv.innerHTML=entryComponent;
-    eventSectionDiv.appendChild(placeHolderDiv);
+    eventDiv.appendChild(placeHolderDiv);
 
     //adds event listener to the save event button
     document.querySelector("#saveEventButton").addEventListener("click", () => {
