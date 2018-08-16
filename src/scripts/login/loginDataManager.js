@@ -2,7 +2,9 @@
 const dashboard = require("../dashboard/dashboard.js");
 
 // putting functions I need for database manipulation inside loginDataManager object
+
 const loginDataManager = Object.create(null, {
+    // saveUser to database.json file
     saveUser: {
         value: (user) => {
             return fetch("http://localhost:8088/users", {
@@ -16,12 +18,17 @@ const loginDataManager = Object.create(null, {
         }
     },
 
+    // get the users from database.json file
     getUsers: {
         value: () => {
             return fetch("http://localhost:8088/users").then(r => r.json())
         }
     },
 
+    /**
+     * Purpose:  Checks to see if user passed in matches user in database.json file.
+     * If there is not a match, we know the user is unique and so we create the user and add to session storage
+     */
     validateUser: {
         value: (user) => {
             // vars for user email and name from the API/DB
@@ -54,32 +61,22 @@ const loginDataManager = Object.create(null, {
                 if (!(userExists)) {
                     // userExists = false, we can create user.
                     console.log("user doesn't exist so creating them");
-                    loginDataManager.saveUser(user).then(() => {
+                    loginDataManager.saveUser(user).then((returnedUser) => {
+                        // get user id to add and set to user.id which modifies the saved user in welcome.js
+                        // debugger
+                        console.log(returnedUser);
                         // add user to session storage to preserve them
-                        sessionStorage.setItem("session", JSON.stringify(user));
-                        console.log(user + " user has been saved!");
+                        sessionStorage.setItem("session", JSON.stringify(returnedUser));
                     });
 
                     // take user to Dashboard
-                    dashboard();
+                    dashboard(user.username);
 
                 }
             });
         }
     }
 });
-
-// function saveUser(user) {
-//     return fetch("http://localhost:8088/users", {
-//         method: "POST",
-//         headers: {
-//             "Content-Type": "application/json"
-//         },
-//         body: JSON.stringify(user)
-//     })
-//         .then(response => response.json())
-// }
-
 
 // you require modules, you export functions
 module.exports = loginDataManager;

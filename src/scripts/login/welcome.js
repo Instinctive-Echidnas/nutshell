@@ -77,24 +77,14 @@ btn.addEventListener("click", function displayForm() {
  */
 registerBtn.addEventListener("click", function validate() {
     // create a new customer account to validate and store if unique
-    const newCustomer = {
+    const user = {
         "email": document.querySelector("input[name=\"email\"]").value,
-        "username": document.querySelector("input[name=\"username\"]").value
+        "username": document.querySelector("input[name=\"username\"]").value,
+        // set a default id of 0 and when user is validated, set the actual associated id from .json file
     }
 
-    // console.log("Testing output of newCustomer object");
-    // console.log(newCustomer.email);
-    // console.log(newCustomer.username);
-
     // validate the new user and test if unique
-    loginDataManager.validateUser(newCustomer);
-
-    // NOTE: I have commented out the saveUser function below so that I am not adding user to database while I develop the validation
-
-    // save the new user to loginDummy.json
-    // loginDataManager.saveUser(newCustomer).then(() => {
-    //     console.log("user has been saved!");
-    // });
+    loginDataManager.validateUser(user);
 });
 
 // export welcome function called in main.js
