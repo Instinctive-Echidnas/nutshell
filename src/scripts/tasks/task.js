@@ -7,63 +7,98 @@ console.log("task.js is connected");
 */
 
 
-const renderTaskForm = require("./tasks/taskForm")
-const APItasksContent = require("./dataManager")
+const TasksDomManager = require("./taskForm.js")
+const APItasksContent = require("../dataManager")
+
+//this needs to be wrapped inside of a function******
+function startTask() {
 
 
 
 
-// const taskManager = Object.create(null, {
+document.querySelector("#taskForm").innerHTML = TasksDomManager.renderTaskModal();
 
 
-//         createTaskForm: {
-//                 value: () => {
-// //Task form to HTML 
-//                         console.log("createForm")
-//                         // document.querySelector("#taskForm").innerHTML = renderTaskForm();
-//                 }
+document.querySelector("#taskSaveButton").addEventListener("click", () => {
 
-//         },
+    // when the save button is clicked, the values are stored in a variable that is sent to Local Storage.
+    const newTask = {
+        task: document.querySelector("#taskFormName").value,
+        taskGoalDate: document.querySelector("#taskGoalDate").value,
+        taskStatus: true
+    }
+    //save to local storage
+    APItasksContent.savetaskEntry(newTask).then(() => {
+        console.log(newTask);
 
-//         saveButtonClick: {
-//             value: ()  => {
-//                         console.log("saveButtonClick")
-//     //                     document.querySelector("#saveTaskButton").addEventListener("click", () => {
+        //this clears the form when the save button is clicked.
+        TasksDomManager.clearForm();
 
-//     // //grabs value from the the form and stores it into a variable newTask
-//     //                 const newTask = {
+        //this renders the task list to the DOM
+        listTasks()
+    })
+})
 
-//     //                             title: document.querySelector("#taskFormInput").value,
-//     //                             date: document.querySelector("#taskGoalDate").value,
-//     //                 }
+//this lists the tasks after refreshing the page.
+function listTasks() {
+    //this clears the DOM and then pulls all tasks to the DOM
+    document.querySelector("#tasksList").innerHTML = "";
+    APItasksContent.getEntries().then(result => {
+        result.forEach(task => {
+            //document.queryselector tells it where in the html to put it and renderContent tells it what to look like.  (as stated in JournalContentDom) ultimately putting it to the dom.
+            document.querySelector("#tasksList").innerHTML += TasksDomManager.renderTask(task);
+        })
 
-//     // //uses the save task function to save to the API and then
-//     //                 APItasksContent.savetaskEntry(newEntry).then(() => {
+    })
+}
+listTasks()
 
-//     //     //clears the DOM
-//     //                 document.querySelector(".tasks").innerHTML = "";
+// function listCompletedTasks() {
 
-//     //     //
-//     //                 APItasksContent.getEntries().then(result => {
-//     //                     result.forEach(entry => {
+//     document.querySelector("#completedTasks").innerHTML = "";
+//     APItasksContent.getCompletedTasks().then(result => {
+//     result.forEach(completedtask => {
 
-//     //                 document.querySelector("#tasksList").innerHTML += renderTaskList();
-//     //                     })
-//     //                 })
+//         document.querySelector("#completedTasks").innerHTML += renderTaskForm.renderCompletedTasks(completedtask);
+//     })
+// })   
+// }
+// listCompletedTasks();
 
-//     //                 })
 
-//     //                     });
+document.querySelector("#tasksList").addEventListener("click", (event) => {
+    console.log(event);
+    if (event.target.id.split("--")[0] === "taskCheckBox") {
+        console.log("Hey!", event.target.id);
+        let id = event.target.id.split("--")[1]
+        console.log(id);
+        // let taskNameDOM = `#taskName--${id}`
+        // console.log(taskNameDOM);
 
-//             }
+        let newobject = {
+            task: document.querySelector(`#taskName--${id}`).value,
+            taskGoalDate: document.querySelector(`#date--${id}`).value,
+            taskStatus: false
+        }
+        console.log("this is a new object", newobject);
 
-//         }
+        APItasksContent.replaceEntry(newobject, id).then(() => {
+            listTasks()
+        })
+        // listCompletedTasks();
+    }
 
-// };
-// // clearForm: {
-//     //         value: () => {
-//     //             document.querySelector("#journalTitleInput").value = "";
-//     //             document.querySelector("#journalTextInput").value = "";
-//     //         }
-//     //     },
-// module.exports = taskManager
+
+
+
+})
+
+
+}
+
+module.exports = startTask
+
+
+
+
+

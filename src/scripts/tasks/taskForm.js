@@ -59,7 +59,7 @@ const TasksDomManager = Object.create(null, {
 
 
 //this is the task list that will post to the DOM.
-    renderTaskList: {
+    renderTask: {
     
         value:  (task) => {
 
