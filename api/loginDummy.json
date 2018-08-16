@@ -24,6 +24,19 @@
       "email": "billyTheKid@cowboy.com",
       "username": "billy",
       "id": 5
+    },
+    {
+      "email": "test",
+      "username": "test",
+      "id": 6
+    }
+  ],
+  "tasks": [
+    {
+      "task": "vfgsfghsfv",
+      "taskGoalDate": "2018-08-01",
+      "taskStatus": false,
+      "id": 1
     }
   ]
 }
