@@ -37,6 +37,58 @@ function dashboard(username) {
     p.innerHTML = `<h2>Welcome to your dashboard, ${username}!</h2>`;
     document.querySelector(".dashboard").appendChild(p);
 
+    // create a container div for all of the modules to be targeted by flexbox styling
+    const moduleContainer = document.createElement("div");
+    moduleContainer.setAttribute("class", "moduleContainer");
+    dashboardRef.appendChild(moduleContainer);
+
+    /**
+     * Divs for respective modules here
+     */
+
+    // task div -- in startTask() function, append everything to .taskDiv
+    const taskDiv = document.createElement("div");
+    taskDiv.setAttribute("class", "taskDiv");
+    taskDiv.textContent = "tasks";
+    moduleContainer.appendChild(taskDiv);
+
+
+    // chat div
+    const chatDiv = document.createElement("div");
+    chatDiv.setAttribute("class", "chatDiv");
+    chatDiv.textContent = "chatterbox";
+    moduleContainer.appendChild(chatDiv);
+
+    // article div
+    const articleDiv = document.createElement("div");
+    articleDiv.setAttribute("class", "articleDiv");
+    articleDiv.textContent = "articles";
+    moduleContainer.appendChild(articleDiv);
+
+    // event div
+    const eventDiv = document.createElement("div");
+    eventDiv.setAttribute("class", "eventDiv");
+    eventDiv.textContent = "events";
+    moduleContainer.appendChild(eventDiv);
+
+    // users div
+    const usersDiv = document.createElement("div");
+    usersDiv.setAttribute("class", "usersDiv");
+    usersDiv.textContent = "users";
+    moduleContainer.appendChild(usersDiv);
+
+    // friends div
+    const friendsDiv = document.createElement("div");
+    friendsDiv.setAttribute("class", "friendsDiv");
+    friendsDiv.textContent = "friends";
+    moduleContainer.appendChild(friendsDiv);
+
+    // messages div
+    const messagesDiv = document.createElement("div");
+    messagesDiv.setAttribute("class", "messagesDiv");
+    messagesDiv.textContent = "messages";
+    moduleContainer.appendChild(messagesDiv);
+
 //_______________________________________________INIT DANIEL'S CHAT__________________________________________
     chat.createWindow();
 
@@ -72,74 +124,13 @@ function dashboard(username) {
             chat.editMessage(id)
         }
     })
-
-    // document.querySelector("#eventSection").addEventListener("click", evt => {
-    //     if (evt.target.classList.contains("event__edit")) {
-
-    //         const id = parseInt(evt.target.id.split("--")[1])
-    //         let newContent = document.querySelector(`article.event__content--${id}`).textContent
-    //         let newName = document.querySelector(`#event__header--${id}`).innerHTML
-    //         let newDate = document.querySelector(`#event__time--${id}`).textContent
-
-    //         eventSectionDiv = document.querySelector(`.event--${id}`);
-    //         let placeHolderDiv = document.createElement("div");
-    //         placeHolderDiv.innerHTML=entryComponent;
-    //         eventSectionDiv.appendChild(placeHolderDiv);
-    //             //creates the form for editing the event content
-    //         placeHolderDiv.innerHTML= `<fieldset class="eventsField">
-    //                                         <label for="eventTitle">Title</label>
-    //                                         <input required type="text" id="eventEditTitle" value="${newName}">
-    //                                     </fieldset>
-    //                                     <fieldset class="eventsField">
-    //                                         <label for="eventsContent">Event Description</label>
-    //                                         <textarea id="eventEditDescription">${newContent}</textarea>
-    //                                     </fieldset>
-    //                                     <fieldset class="eventsField">
-    //                                         <label for="eventDate">Date</label>
-    //                                         <input required type="date" id="eventEditDate"> Previous Date:${newDate}
-    //                                     </fieldset>
-    //                                     <button id="saveEditEventButton">Save Edit</button>
-    //                                     <button id="cancelEditEventButton">Cancel Edit</button>
-    //                                     `;
-    //                                     //adding an event listener to the save edit button that creates a new object that has the same keys as the original database object and updates the object in the database using the event's id number
-    //                                     document.querySelector("#saveEditEventButton").addEventListener("click",()=>{
-    //                                      const editedEvent = {
-    //                                         eventTitle: document.querySelector("#eventEditTitle").value,
-    //                                         eventContent: document.querySelector("#eventEditDescription").value,
-    //                                         eventDate: document.querySelector("#eventEditDate").value
-    //                                     }
-    //                                     dataManager.editEvent(id,editedEvent)
-    //                                     .then(() => {
-    //                                         // Clear the event list and repopulate it with the new data
-    //                                         entryComponent.clearForm
-    //                                         listEvents()
-    //                                     })
-    //                                     })
-    //                                     //adding an event listener that targets the cancel edit button so that the edit div is removed from the dom without changing any of the values that exist in the database
-    //                                     document.querySelector("#cancelEditEventButton").addEventListener("click",()=>{
-    //                                         const editSectionSelector=document.querySelector("#cancelEditEventButton").parentNode
-    //                                         editSectionSelector.parentNode.removeChild(editSectionSelector)
-    //                                     })
-    //     }
-    // });
-
-    // document.querySelector("#eventSection").addEventListener("click", evt => {
-    //     if (evt.target.classList.contains("saveEditEventButton")) {
-    //         console.log(evt.target)
-    //             // const editedEvent = {
-    //             //     eventTitle: document.querySelector("#eventEditTitle").value,
-    //             //     eventContent: document.querySelector("#eventEditDescription").value,
-    //             //     eventDate: document.querySelector("#eventEditDate").value
-    //             // }
-    //             // console.log(editedEvent)
-    //     }
-    // })
 //_______________________________________________END OF CHAT__________________________________________
 
 
-    console.log("starting Helen");
 
 //The task section 
-    startTask();}
+    startTask();
+
+}
 
 module.exports = dashboard;

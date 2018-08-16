@@ -44,47 +44,28 @@
       "email": "11111",
       "username": "111111",
       "id": 9
+    },
+    {
+      "email": "nick",
+      "username": "nick",
+      "id": 10
+    },
+    {
+      "email": "spoon",
+      "username": "fork",
+      "id": 11
     }
   ],
   "friends": [],
   "messages": [
     {
       "userId": 5,
-      "message": "1",
-      "date": 1534449515553,
+      "message": "",
+      "date": 1534458193944,
       "id": 1
-    },
-    {
-      "userId": 5,
-      "message": "2",
-      "date": 1534449516651,
-      "id": 2
-    },
-    {
-      "userId": 5,
-      "message": "3",
-      "date": 1534449517543,
-      "id": 3
-    },
-    {
-      "userId": 5,
-      "message": "4",
-      "date": 1534449518432,
-      "id": 4
-    },
-    {
-      "userId": 5,
-      "message": "5",
-      "date": 1534449519329,
-      "id": 5
-    },
-    {
-      "userId": 5,
-      "message": "6",
-      "date": 1534449520293,
-      "id": 6
     }
   ],
   "events": [],
-  "tasks": []
+  "tasks": [],
+  "articles": []
 }
