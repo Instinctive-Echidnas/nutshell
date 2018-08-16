@@ -1,3 +1,5 @@
+// requiring dashboard so can invoke dashboard function in validateUser
+const dashboard = require("../dashboard/dashboard.js");
 
 // putting functions I need for database manipulation inside loginDataManager object
 const loginDataManager = Object.create(null, {
@@ -53,10 +55,13 @@ const loginDataManager = Object.create(null, {
                     // userExists = false, we can create user.
                     console.log("user doesn't exist so creating them");
                     loginDataManager.saveUser(user).then(() => {
+                        // add user to session storage to preserve them
+                        sessionStorage.setItem("session", JSON.stringify(user));
                         console.log(user + " user has been saved!");
                     });
 
                     // take user to Dashboard
+                    dashboard();
 
                 }
             });
