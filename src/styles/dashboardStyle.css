@@ -33,11 +33,16 @@
 }
 
 .articleDiv {
-    background-color: blueviolet;
+    background-color: royalblue;
     padding: 20px;
-    width: 200px;
-    height: 100px;
+    width: 500px;
+    height: 500px;
     border: 1px solid black;
+
+}
+
+.articleDiv button {
+    /* width: 2em; */
 }
 
 .eventDiv {

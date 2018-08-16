@@ -63,7 +63,7 @@ function dashboard(username) {
     // article div
     const articleDiv = document.createElement("div");
     articleDiv.setAttribute("class", "articleDiv");
-    articleDiv.textContent = "articles";
+    // articleDiv.textContent = "articles";
     moduleContainer.appendChild(articleDiv);
 
     // event div
