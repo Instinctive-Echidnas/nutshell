@@ -1,5 +1,5 @@
 const eventDataManager = Object.create(null, {
-    saveEventEntry: {
+    saveEvent: {
         value: (entry) => {
             return fetch("http://localhost:8088/events", {
                 method: "POST",
@@ -23,7 +23,20 @@ const eventDataManager = Object.create(null, {
             })
                 .then(r => r.json())
         }
+    },
+    editEvent: {
+        value: (id,event) => {
+            return fetch(`http://localhost:8088/events/${id}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(event)
+            })
+                .then(response => response.json())
+        }
     }
-})
+    }
+)
 
 module.exports = eventDataManager
