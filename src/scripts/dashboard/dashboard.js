@@ -4,6 +4,7 @@
 
 // i had to use ../chat as opposed to ./chat which it was
 const chat = require("../chat/chat.js");
+const startTask = require("../tasks/task.js");
 
 // passing in the username from session storage for custom welcome
 function dashboard(username) {
@@ -34,6 +35,10 @@ function dashboard(username) {
 
     // init Daniel's chat
     chat.createWindow();
+    console.log("starting Helen");
+
+//The task section 
+    startTask();
 }
 
 module.exports = dashboard;

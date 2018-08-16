@@ -1,5 +1,14 @@
 // const chat = require("./chat/chat.js");
 const welcome = require("./login/welcome.js");
+
+
+console.log("Hello main.js");
+
+
+
+
+// -------------Dashboard Section --------------
+
 const dashboard = require("./dashboard/dashboard.js");
 
 // set login as reference to session storage item
@@ -15,3 +24,9 @@ if (login === null) {
    // we must have session storage which means there is an active user
    dashboard(login.username);
 }
+
+//-----------------End of Dashboard------------------------------
+
+
+
+
