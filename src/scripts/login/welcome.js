@@ -27,9 +27,22 @@ const scriptTagReference = document.querySelector("script");
 documentBody.insertBefore(loginDivReference, scriptTagReference);
 // documentBody.appendChild(loginDiv);
 
+// create the logo for dashboard
+const logo = document.createElement("img");
+// I'm thinking images for live dist need to be in dist folder.  is this so?  Ask Steve.  Had issues with it in other folders and probably because Grunt file isn't copying those over to dist
+logo.setAttribute("src", "squirrelNutshell.png");
+logo.setAttribute("width", "100");
+logo.setAttribute("height", "100");
+logo.setAttribute("alt", "Nutshell");
+const scriptRef = document.querySelector("script");
+const dashboardRef = document.querySelector(".dashboard");
+// insert image before script tag and anything else on page
+// document.querySelector("body").insertBefore(logo, scriptRef);
+loginDivReference.appendChild(logo);
+
 
 // store welcome message to be displayed
-const welcomeMsg = "<h1>Welcome to Nutshell! Please register/login to continue<br/></h1>";
+const welcomeMsg = "<h2>Welcome to Nutshell! Please register/login to continue<br/></h2>";
 
 // button for register a new account to display register form on click
 const btn = document.createElement("button");

@@ -14,18 +14,22 @@ function dashboard(username) {
     // clear loginClass container
     document.querySelector(".loginClass").innerHTML = "";
 
+    // clear DOM information from welcome/registration/login
+    const child = document.querySelector(".loginClass");
+    child.parentNode.removeChild(child)
+
     // create the logo for dashboard
-    const dashboardImage = document.createElement("img");
+    const logo = document.createElement("img");
     // I'm thinking images for live dist need to be in dist folder.  is this so?  Ask Steve.  Had issues with it in other folders and probably because Grunt file isn't copying those over to dist
-    dashboardImage.setAttribute("src", "squirrelNutshell.png");
-    dashboardImage.setAttribute("width", "100");
-    dashboardImage.setAttribute("height", "100");
-    dashboardImage.setAttribute("alt", "Nutshell");
+    logo.setAttribute("src", "squirrelNutshell.png");
+    logo.setAttribute("width", "100");
+    logo.setAttribute("height", "100");
+    logo.setAttribute("alt", "Nutshell");
+    logo.setAttribute("class", "logo");
     const scriptRef = document.querySelector("script");
     const dashboardRef = document.querySelector(".dashboard");
-    // insert image before script tag and anything else on page
-    document.querySelector("body").insertBefore(dashboardImage, scriptRef);
     // insert dashboard container before script tag but after image
+    dashboardRef.appendChild(logo);
     document.querySelector("body").insertBefore(dashboardRef, scriptRef);
     const p = document.createElement("p");
     // using username argument for custom welcome
@@ -33,7 +37,7 @@ function dashboard(username) {
     document.querySelector(".dashboard").appendChild(p);
 
     // init Daniel's chat
-    chat.createWindow();
+    //chat.createWindow();
 }
 
 module.exports = dashboard;
