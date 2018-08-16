@@ -16,9 +16,27 @@
       "id": 3
     },
     {
-      "email": "tesetUser@cent.com",
-      "username": "testUser",
+      "email": "robotlover@robot",
+      "username": "weirdo",
       "id": 4
+    },
+    {
+      "email": "billyTheKid@cowboy.com",
+      "username": "billy",
+      "id": 5
+    },
+    {
+      "email": "test",
+      "username": "test",
+      "id": 6
+    }
+  ],
+  "tasks": [
+    {
+      "task": "vfgsfghsfv",
+      "taskGoalDate": "2018-08-01",
+      "taskStatus": false,
+      "id": 1
     }
   ]
 }
