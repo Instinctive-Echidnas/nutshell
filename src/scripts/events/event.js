@@ -1,9 +1,9 @@
-const eventModule = function (){
 const entryComponent = require("events/eventForm.js");
 const eventList = require("events/eventList.js")
-const addButton = document.querySelector("#eventForm");
 const dataManager = require("events/eventdataManager.js")
 
+const eventModule = function (){
+const addButton = document.querySelector("#eventForm");
 //list all of the events currently in the database
 const listEvents = () => {
     dataManager.getAllEvents().then(entry => eventList(entry))

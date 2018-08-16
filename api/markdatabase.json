@@ -24,16 +24,10 @@
   "tasks": [],
   "events": [
     {
-      "eventTitle": "2nd event",
-      "eventContent": "hello there",
-      "eventDate": "2018-08-13",
+      "eventTitle": "1st even",
+      "eventContent": "My name is Mark",
+      "eventDate": "2018-08-09",
       "id": 2
-    },
-    {
-      "eventTitle": "knkkwnqfkn",
-      "eventContent": "         qwfniknqwinfonqw       ",
-      "eventDate": "2018-08-26",
-      "id": 3
     },
     {
       "eventTitle": "hello",
