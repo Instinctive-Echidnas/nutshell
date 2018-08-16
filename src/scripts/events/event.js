@@ -1,3 +1,4 @@
+const eventModule = function (){
 const entryComponent = require("events/eventForm.js");
 const eventList = require("events/eventList.js")
 const addButton = document.querySelector("#eventForm");
@@ -67,18 +68,6 @@ document.querySelector("#eventSection").addEventListener("click", evt => {
     }
 });
 
-document.querySelector("#eventSection").addEventListener("click", evt => {
-    if (evt.target.classList.contains("saveEditEventButton")) {
-        console.log(evt.target)
-            // const editedEvent = {
-            //     eventTitle: document.querySelector("#eventEditTitle").value,
-            //     eventContent: document.querySelector("#eventEditDescription").value,
-            //     eventDate: document.querySelector("#eventEditDate").value
-            // }
-            // console.log(editedEvent)
-    }
-})
-
 //adds event listener to the add new event button, which brings up a form for the user to add event details
 addButton.addEventListener("click",()=>{
     //creates a new div element to hold the event form
@@ -103,9 +92,11 @@ addButton.addEventListener("click",()=>{
                 listEvents()
             })
     })
+    //added in an event listener for so that the user can cancel a new event entry without disturbing the data already in the database
     document.querySelector("#cancelEventButton").addEventListener("click",()=>{
         const editSectionSelector=document.querySelector("#cancelEventButton").parentNode
         editSectionSelector.parentNode.removeChild(editSectionSelector)
     })
 });
-module.exports = addButton;
+}
+module.exports = eventModule;

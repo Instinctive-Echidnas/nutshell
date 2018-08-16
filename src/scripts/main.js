@@ -1,7 +1,7 @@
 const welcome = require("./login/welcome.js");
 const events = require("events/event.js");
-origin;
-events;
+
+events();
 
 console.log("Hello main.js");
 

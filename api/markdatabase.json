@@ -24,12 +24,6 @@
   "tasks": [],
   "events": [
     {
-      "eventTitle": "jerry",
-      "eventContent": "mouse",
-      "eventDate": "2018-08-02",
-      "id": 1
-    },
-    {
       "eventTitle": "2nd event",
       "eventContent": "hello there",
       "eventDate": "2018-08-13",
@@ -46,6 +40,12 @@
       "eventContent": "goodbye",
       "eventDate": "2018-08-24",
       "id": 4
+    },
+    {
+      "eventTitle": "blah",
+      "eventContent": "blah",
+      "eventDate": "2018-08-21",
+      "id": 5
     }
   ]
 }
