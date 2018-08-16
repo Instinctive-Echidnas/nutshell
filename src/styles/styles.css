@@ -2,11 +2,20 @@
 @import 'dashboardStyle.css';
 
 body {
-//    background-color: black;
-  //  color: white;
+/*  background-color: black;
+/* color: white; */
 }
 
 #chatWindow {
     width: 50%;
     margin: auto;
+}
+
+#taskSaveButton {
+    background-color: rgb(8, 170, 245);
+}
+
+.tasks {
+    background-color: bisque;
+
 }
