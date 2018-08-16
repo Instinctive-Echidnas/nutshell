@@ -36,6 +36,7 @@ function dashboard(username) {
 
     // init Daniel's chat
     chat.createWindow();
+    event();
 }
 
 module.exports = dashboard;

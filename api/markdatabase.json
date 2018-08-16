@@ -1,9 +1,24 @@
 {
   "users": [
     {
-      "id": 1,
-      "username": "Steve",
-      "email": "me@me.com"
+      "email": "mike@frog.com",
+      "username": "mike",
+      "id": 1
+    },
+    {
+      "email": "blah",
+      "username": "blahblah",
+      "id": 2
+    },
+    {
+      "email": "hey",
+      "username": "there",
+      "id": 3
+    },
+    {
+      "email": "sup",
+      "username": "bro",
+      "id": 4
     }
   ],
   "messages": [
@@ -24,22 +39,34 @@
   "tasks": [],
   "events": [
     {
-      "eventTitle": "1st even",
-      "eventContent": "My name is Mark",
-      "eventDate": "2018-08-09",
-      "id": 2
-    },
-    {
       "eventTitle": "hello",
       "eventContent": "goodbye",
       "eventDate": "2018-08-24",
       "id": 4
     },
     {
-      "eventTitle": "blah",
-      "eventContent": "blah",
-      "eventDate": "2018-08-21",
+      "eventTitle": "sup",
+      "eventContent": "dude",
+      "eventDate": "2018-08-11",
       "id": 5
+    },
+    {
+      "eventTitle": "there",
+      "eventContent": "there",
+      "eventDate": "2018-08-18",
+      "id": 6
+    },
+    {
+      "eventTitle": "hello",
+      "eventContent": "hi there",
+      "eventDate": "2018-08-14",
+      "id": 7
+    },
+    {
+      "eventTitle": "sup",
+      "eventContent": "bro",
+      "eventDate": "2018-08-21",
+      "id": 12
     }
   ]
 }

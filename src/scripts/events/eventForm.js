@@ -1,5 +1,4 @@
-//clears the current event listing by setting the div innerHTML to be an empty string until it is ready to be repopulated
-clearEventForm = "";
+
 
 //form to appear when user clicks on the create new event button
 renderEventForm =

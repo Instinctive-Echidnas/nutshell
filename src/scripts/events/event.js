@@ -1,15 +1,24 @@
 const entryComponent = require("events/eventForm.js");
 const eventList = require("events/eventList.js")
 const dataManager = require("events/eventdataManager.js")
+const eventListComponent = require("events/eventListComponent.js")
 
 const eventModule = function (){
+const eventSectionDiv = document.createElement("div");
+eventSectionDiv.setAttribute("id", "eventSection");
+document.querySelector(".dashboard").appendChild(eventSectionDiv);
+dataManager.getAllEvents().then(events =>{events.map(event => {eventListComponent(event), document.getElementById("eventSection").innerHTML+=eventListComponent(event)
+})})
+const makeEventFormButton = document.createElement("BUTTON");
+makeEventFormButton.setAttribute("id", "eventForm");
+makeEventFormButton.innerHTML="Add Event";
+document.querySelector(".dashboard").appendChild(makeEventFormButton);
 const addButton = document.querySelector("#eventForm");
+
 //list all of the events currently in the database
 const listEvents = () => {
     dataManager.getAllEvents().then(entry => eventList(entry))
 }
-listEvents();
-
 //after the list is loaded, then the event listener for the delete button is put into place. This uses event bubbling(the event listener is attached to the dom element on rather than on every single delete button individually) in order to prevent it from breaking when the innerHTML of the div section is updated on reload.
 document.querySelector("#eventSection").addEventListener("click", evt => {
     if (evt.target.classList.contains("event__delete")) {
@@ -26,10 +35,10 @@ document.querySelector("#eventSection").addEventListener("click", evt => {
         let newName = document.querySelector(`#event__header--${id}`).innerHTML
         let newDate = document.querySelector(`#event__time--${id}`).textContent
 
-        eventSectionDiv = document.querySelector(`.event--${id}`);
+        eventSectiontoEditdiv = document.querySelector(`.event--${id}`);
         let placeHolderDiv = document.createElement("div");
         placeHolderDiv.innerHTML=entryComponent;
-        eventSectionDiv.appendChild(placeHolderDiv);
+        eventSectiontoEditdiv.appendChild(placeHolderDiv);
             //creates the form for editing the event content
         placeHolderDiv.innerHTML= `<fieldset class="eventsField">
                                         <label for="eventTitle">Title</label>
