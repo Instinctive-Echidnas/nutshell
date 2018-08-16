@@ -56,7 +56,7 @@ const TasksDomManager = Object.create(null, {
         }
     },
 
-    
+
 
 //this is the task list that will post to the DOM.
     renderTaskList: {
@@ -71,6 +71,22 @@ const TasksDomManager = Object.create(null, {
             </div>`
         
             }
+    }, 
+
+    renderCompletedTasks: {
+        value: (completedTask) => {
+
+            return `<div id="completedtaskListWrapper">
+            <h2 id="comepletedtasksTitle">Completed Tasks</h2>
+            <h4 id="taskName--${task.id}">${task.task}</h4> 
+            <h4 id="date--${task.id}">Target Date: ${task.taskGoalDate}</h4>
+            <input type="checkbox" name="task" value="taskcomplete" id="taskCheckBox--${task.id}">
+            <button class="editButton" id="edit--${task.id}">Edit</button>
+        </div>`
+
+        }
+
+
     }
 })
 

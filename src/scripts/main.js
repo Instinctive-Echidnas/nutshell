@@ -79,7 +79,20 @@ function listTasks() {
 
 })
 }
-listTasks()
+listTasks();
+
+function listCompletedTasks() {
+
+    document.querySelector("#completedTasks").innerHTML = "";
+    APIObject.getCompletedTasks().then(result => {
+    result.forEach(completedtask => {
+
+        document.querySelector("#completedTasks").innerHTML += TasksDomManager.renderCompletedTasks(completedtask);
+    })
+})   
+}
+listCompletedTasks();
+
 
 document.querySelector("#tasksList").addEventListener("click", (event) => {
     console.log(event);
@@ -87,11 +100,24 @@ document.querySelector("#tasksList").addEventListener("click", (event) => {
         console.log("Hey!", event.target.id);
         let id = event.target.id.split("--")[1]
         console.log(id);
-        
-        APIObject.replaceEntry(id).then(()=> {
-            listEntries()
-        }) 
+        // let taskNameDOM = `#taskName--${id}`
+        // console.log(taskNameDOM);
 
+        let newobject = {
+        task: document.querySelector(`#taskName--${id}`).value,
+        taskGoalDate: document.querySelector(`#date--${id}`).value,
+        taskStatus: false
+        }
+        console.log("this is a new object", newobject);
+        
+        APIObject.replaceEntry(newobject, id).then(()=> {
+            listTasks() 
+        }) 
+        // listCompletedTasks();
     }
+
+
+
         
 })
+

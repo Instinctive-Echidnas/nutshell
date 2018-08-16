@@ -11,3 +11,8 @@ body {
 #taskSaveButton {
     background-color: rgb(8, 170, 245);
 }
+
+.tasks {
+    background-color: bisque;
+
+}
