@@ -1,33 +1,14 @@
+@import "chatStyle.css";
+
 body {
     background-color: white;
     color: black;
 }
 
-#chatWindow {
-    width: 50%;
-    margin: auto;
+#taskSaveButton {
+    background-color: rgb(8, 170, 245);
 }
 
-#chatHistory {
-    /* display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap; */
-    height: 600px;
-    width: 300px;
-    overflow-y: auto;
-    border: solid darkgray 2px;
-}
-
-.messages {
-    border-top: lightgray solid 1px;
-    padding: 5px 2px 5px 2px;
-    display: flex;
-    flex-direction: row;
-}
-
-.userName {
-    background-color: lightsalmon;
-}
-.chatMessage {
-    word-wrap: break-word;
+.tasks {
+    background-color: bisque;
 }
