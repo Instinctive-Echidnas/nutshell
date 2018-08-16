@@ -1,12 +1,11 @@
 const listElement = document.querySelector("#eventSection")
 const eventListComponent = require("events/eventListComponent.js")
-
-const eventList = (entries) => {
+//takes the events and maps over them and takes the info and sends it into the eventListComponent
+const eventList = (events) => {
     listElement.innerHTML = ""
 
-    entries.map(entry => {
-        console.log(entry)
-        listElement.innerHTML += eventListComponent(entry)
+    events.map(event => {
+        listElement.innerHTML += eventListComponent(event)
     })
 }
 

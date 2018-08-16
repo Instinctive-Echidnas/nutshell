@@ -29,7 +29,7 @@ document.querySelector("#eventSection").addEventListener("click", evt => {
         let placeHolderDiv = document.createElement("div");
         placeHolderDiv.innerHTML=entryComponent;
         eventSectionDiv.appendChild(placeHolderDiv);
-
+            //creates the form for editing the event content
         placeHolderDiv.innerHTML= `<fieldset class="eventsField">
                                         <label for="eventTitle">Title</label>
                                         <input required type="text" id="eventEditTitle" value="${newName}">
@@ -42,7 +42,10 @@ document.querySelector("#eventSection").addEventListener("click", evt => {
                                         <label for="eventDate">Date</label>
                                         <input required type="date" id="eventEditDate"> Previous Date:${newDate}
                                     </fieldset>
-                                    <button id="saveEditEventButton">Save Edit</button>`;
+                                    <button id="saveEditEventButton">Save Edit</button>
+                                    <button id="cancelEditEventButton">Cancel Edit</button>
+                                    `;
+                                    //adding an event listener to the save edit button that creates a new object that has the same keys as the original database object and updates the object in the database using the event's id number
                                     document.querySelector("#saveEditEventButton").addEventListener("click",()=>{
                                      const editedEvent = {
                                         eventTitle: document.querySelector("#eventEditTitle").value,
@@ -55,6 +58,11 @@ document.querySelector("#eventSection").addEventListener("click", evt => {
                                         entryComponent.clearForm
                                         listEvents()
                                     })
+                                    })
+                                    //adding an event listener that targets the cancel edit button so that the edit div is removed from the dom without changing any of the values that exist in the database
+                                    document.querySelector("#cancelEditEventButton").addEventListener("click",()=>{
+                                        const editSectionSelector=document.querySelector("#cancelEditEventButton").parentNode
+                                        editSectionSelector.parentNode.removeChild(editSectionSelector)
                                     })
     }
 });
@@ -94,6 +102,10 @@ addButton.addEventListener("click",()=>{
                 entryComponent.clearForm
                 listEvents()
             })
+    })
+    document.querySelector("#cancelEventButton").addEventListener("click",()=>{
+        const editSectionSelector=document.querySelector("#cancelEventButton").parentNode
+        editSectionSelector.parentNode.removeChild(editSectionSelector)
     })
 });
 module.exports = addButton;
