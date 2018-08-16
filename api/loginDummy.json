@@ -16,49 +16,14 @@
       "id": 3
     },
     {
-      "email": "tesetUser@cent.com",
-      "username": "testUser",
+      "email": "robotlover@robot",
+      "username": "weirdo",
       "id": 4
     },
     {
-      "email": "candycane",
-      "username": "candycane",
+      "email": "billyTheKid@cowboy.com",
+      "username": "billy",
       "id": 5
-    },
-    {
-      "email": "",
-      "username": "",
-      "id": 6
-    },
-    {
-      "email": "testingstuffte",
-      "username": "testingstuff",
-      "id": 7
-    },
-    {
-      "email": "newaccount",
-      "username": "heybrother",
-      "id": 8
-    },
-    {
-      "email": "agpber",
-      "username": "gppa",
-      "id": 9
-    },
-    {
-      "email": "blahbalblh",
-      "username": "aaa",
-      "id": 10
-    },
-    {
-      "email": "nuthead",
-      "username": "nuttty",
-      "id": 11
-    },
-    {
-      "email": "agladf",
-      "username": "edlfadf",
-      "id": 12
     }
   ]
 }

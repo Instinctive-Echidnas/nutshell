@@ -12,6 +12,7 @@ button {
     background-color: bisque;
     border: 1px solid black;
     text-shadow: 1px 0px #fff;
+    border-radius: 8px;
 }
 
 button:hover {
