@@ -42,18 +42,28 @@ const loginDataManager = Object.create(null, {
             // var to account if user exists or not
             let userExists = false;
 
+            // keep track of userObject being returned later in promise
+            let userObject = user;
+
             // get users first in order to search through them for user passed in
             loginDataManager.getUsers().then(response => {
                 // response now is a reference to the users
                 response.forEach(element => {
                     userEmail = element.email;
                     userName = element.username;
+                    myMatchedUser = element;
 
                     // i want to use toUpperCase so that email and usernames are not case sensitive
                     if ((email.toUpperCase() === userEmail.toUpperCase()) || (name.toUpperCase() === userName.toUpperCase())) {
                         // change userExists to true and break or return
                         userExists = true;
-                        console.log("username or email already exists; please try again!");
+                        console.log("username or email already exists; logging you in as, " + element.username);
+                        // if user does exist we need to log them in and take them to the dashboard
+                        // log user in
+                        // add user to session storage to preserve them
+                        sessionStorage.setItem("session", JSON.stringify(myMatchedUser));
+                        // take user to dashboard by invoking dashboard(user.username);
+                        dashboard(user.username);
                     }
                 }); // forEach
 
@@ -62,8 +72,9 @@ const loginDataManager = Object.create(null, {
                     // userExists = false, we can create user.
                     console.log("user doesn't exist so creating them");
                     loginDataManager.saveUser(user).then((returnedUser) => {
+                        // set userObject equal to returned user to preserve this for setting later in storage
+                        userObject = returnedUser;
                         // get user id to add and set to user.id which modifies the saved user in welcome.js
-                        // debugger
                         console.log(returnedUser);
                         // add user to session storage to preserve them
                         sessionStorage.setItem("session", JSON.stringify(returnedUser));
@@ -71,8 +82,8 @@ const loginDataManager = Object.create(null, {
 
                     // take user to Dashboard
                     dashboard(user.username);
+                }  // if user does not exist
 
-                }
             });
         }
     }
