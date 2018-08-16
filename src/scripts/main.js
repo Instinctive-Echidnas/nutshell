@@ -1,21 +1,25 @@
-const chat = require("./chat/chat.js");
+// const chat = require("./chat/chat.js");
 const welcome = require("./login/welcome.js");
+const dashboard = require("./dashboard/dashboard.js");
 
-console.log("Hello main.js");
+// console.log("Hello main.js");
 
-tempObject  = {
-    userName: false
-}
+// set to true in order to go to dashboard and false to go to welcome/registration
+// tempObject  = {
+//     userName: false
+// }
 
-sessionStorage.setItem("session", JSON.stringify(tempObject));
+// sessionStorage.setItem("session", JSON.stringify(tempObject));
 
 let login = JSON.parse(sessionStorage.getItem("session"));
 
-if (login.userName) {
-    console.log("Dashboard");
-} else {
-    console.log("Login: invoking welcome function inside of welcome module");
+if (login === null) {
+    console.log("No session storage information--please register");
     welcome();
+} else {
+    console.log("taking you to the dashboard: " + login.username);
+   // we must have session storage which means there is an active user
+   dashboard(login.username);
 }
 
-chat.createWindow();
+// chat.createWindow();
