@@ -46,14 +46,19 @@
       "id": 9
     },
     {
-      "email": "ktygcdxytkxcyktx",
-      "username": "yvluyvfyuvfclyuc",
+      "email": "wewqer",
+      "username": "wqerwqrw",
       "id": 10
     },
     {
-      "email": "asoihnioqhnwf0u91u093r",
-      "username": "i3hjf90jh019jh0f9h109f2",
+      "email": "sdfsf",
+      "username": "sdfaf",
       "id": 11
+    },
+    {
+      "email": "dfg",
+      "username": "agf",
+      "id": 12
     }
   ],
   "friends": [],
@@ -84,54 +89,18 @@
     },
     {
       "userId": 5,
-      "message": "5",
-      "date": 1534449519329,
+      "message": "sadfsadf",
+      "date": 1534516714351,
       "id": 5
     },
     {
       "userId": 5,
-      "message": "6",
-      "date": 1534449520293,
+      "message": "sdfsaf",
+      "date": 1534516715364,
       "id": 6
-    },
-    {
-      "userId": 5,
-      "message": "hello",
-      "date": 1534463287776,
-      "id": 7
-    },
-    {
-      "userId": 5,
-      "message": "hello",
-      "date": 1534463300804,
-      "id": 8
-    },
-    {
-      "userId": 5,
-      "message": "sup",
-      "date": 1534463405982,
-      "id": 9
-    },
-    {
-      "userId": 5,
-      "message": "kewinfaioionafiw",
-      "date": 1534513700370,
-      "id": 10
     }
   ],
   "events": [
-    {
-      "eventTitle": "there",
-      "eventContent": "there",
-      "eventDate": "2018-08-18",
-      "id": 6
-    },
-    {
-      "eventTitle": "hello",
-      "eventContent": "hi there",
-      "eventDate": "2018-08-14",
-      "id": 7
-    },
     {
       "eventTitle": "sup",
       "eventContent": "bro",
@@ -139,9 +108,9 @@
       "id": 12
     },
     {
-      "eventTitle": "hello",
-      "eventContent": "my stuff works",
-      "eventDate": "2018-08-24",
+      "eventTitle": "event test",
+      "eventContent": "Hey there",
+      "eventDate": "2018-08-15",
       "id": 13
     }
   ],
@@ -151,6 +120,12 @@
       "taskGoalDate": "2018-08-21",
       "taskStatus": false,
       "id": 1
+    },
+    {
+      "task": "Test Task 1",
+      "taskGoalDate": "2018-08-15",
+      "taskStatus": true,
+      "id": 2
     }
   ]
 }
