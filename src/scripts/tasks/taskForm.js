@@ -17,7 +17,7 @@ const TasksDomManager = Object.create(null, {
     renderTaskModal: {
         value: () => {
 
-   return `<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Create Task</button>
+   return `<button type="button" class="btn btn-primary" id="newTaskButton" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Create Task</button>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -63,25 +63,27 @@ const TasksDomManager = Object.create(null, {
     
         value:  (task) => {
 
-        return `<div id="taskListWrapper">
-                <h4 id="taskName--${task.id}">Task: ${task.task}</h4> 
-                <h4 id="date--${task.id}">Target Date: ${task.taskGoalDate}</h4>
-                <input type="checkbox" name="task" value="taskcomplete" id="taskCheckBox--${task.id}">
-                <button class="editButton" id="edit--${task.id}">Edit</button>
-            </div>`
+        return `<div class="task-card" id="taskID--${task.id}">
+                    <h4 id="taskName--${task.id}">Task: <span id="taskNameSpan--${task.id}">${task.task}</span></h4> 
+                    <h4 id="date--${task.id}">Target Date: <span id="dateSpan--${task.id}">${task.taskGoalDate}</span></h4>
+                    <input type="checkbox" name="task" value="taskcomplete" id="taskCheckBox--${task.id}">
+                    <button class="editButton" id="edit--${task.id}">Edit</button>
+              </div>`
         
             }
     }, 
 
-    renderCompletedTasks: {
+    renderCompletedTask: {
         value: (completedTask) => {
 
             return `<div id="completedtaskListWrapper">
+            <div id="completedTaskId--${task.id}>
             <h2 id="comepletedtasksTitle">Completed Tasks</h2>
             <h4 id="taskName--${task.id}">${task.task}</h4> 
             <h4 id="date--${task.id}">Target Date: ${task.taskGoalDate}</h4>
             <input type="checkbox" name="task" value="taskcomplete" id="taskCheckBox--${task.id}">
             <button class="editButton" id="edit--${task.id}">Edit</button>
+            </div>
         </div>`
 
         }

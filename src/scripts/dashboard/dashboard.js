@@ -5,6 +5,7 @@
 // i had to use ../chat as opposed to ./chat which it was
 const chat = require("../chat/chat.js");
 const startTask = require("../tasks/task.js");
+const editedtask = require("../tasks/editedtask.js");
 
 // passing in the username from session storage for custom welcome
 function dashboard(username) {
