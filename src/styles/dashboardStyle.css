@@ -6,8 +6,71 @@
     border: 1px solid black;
 }
 
-/* edit logo here */
-/* 
-.logo {
+/* container to control module flex behavior */
+.moduleContainer {
+   display: flex;
+   flex-wrap: wrap;
+   /* justify-content: space-evenly; */
+   justify-content: center;
+   align-items: center;
+}
 
+.taskDiv {
+    background-color: greenyellow;
+    padding: 20px;
+    /* width: 200px;
+    height: 100px; */
+    border: 1px solid black;
+}
+
+
+.chatDiv {
+    background-color: yellow;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.articleDiv {
+    background-color: royalblue;
+    padding: 20px;
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+
+}
+
+/* .articleDiv button {
+    width: 2em;
 } */
+
+.eventDiv {
+    background-color: mediumaquamarine;
+    padding: 20px;
+    /* width: 200px;
+    height: 100px; */
+    border: 1px solid black;
+}
+
+.usersDiv {
+    background-color: goldenrod;
+    padding: 20px;
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.friendsDiv {
+    background-color: paleturquoise;
+    padding: 20px;
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.messagesDiv {
+    background-color: firebrick;
+    padding: 20px;
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+}

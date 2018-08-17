@@ -2,6 +2,9 @@
  * @Author:  Nick Black
  *
  * @Purpose:  display welcome msg to DOM and provide option to register a new account and be taken to the Dashboard.
+ * 
+ * todo:  separate create user functionality in validate function in loginDataManager
+ * so that it doesn't automatically create a user if the account doesn't exist during login--but only during register new account
  *
  *
  */

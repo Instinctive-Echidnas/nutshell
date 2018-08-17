@@ -13,7 +13,7 @@ chatListeners = {
     },
 //vvvvvvvvvvvvvvvvv THIS IS THE EVENT LISTERNER FOR THE CHAT DELETE vvvvvvvvvvvvvvvvvvvvvvv
     deleteButton: () => {document.querySelector("body").addEventListener("click", (evt) => {
-        // console.log(evt)
+        //console.log(evt)
         // console.log(evt.target.id)
         if (evt.target.id.includes(`deletechatButton--${evt.target.id.split("--")[1]}`)) {
             console.log("delete button clicked");

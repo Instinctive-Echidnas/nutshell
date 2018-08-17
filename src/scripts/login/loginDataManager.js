@@ -1,3 +1,5 @@
+// rather than make a specific data manager for articles, I'm going to include the necessary functions here
+
 // requiring dashboard so can invoke dashboard function in validateUser
 const dashboard = require("../dashboard/dashboard.js");
 
@@ -85,6 +87,17 @@ const loginDataManager = Object.create(null, {
                 }  // if user does not exist
 
             });
+        }
+    },
+
+    getArticleFormInput: {
+        value: () => {
+            console.log("function executed");
+            // console.log ("getArticleFormInput called")
+            // if ((document.querySelector("input[name=\"newsTitle\"]").value) !== null && (document.querySelector("input[name=\"Synopsis\"]").value) !== null && (document.querySelector("input[name=\"url\"]").value) !== null) {
+            //     // form fields could still be an empty strong but this protects from them being null/undef
+            //     console.log("fields not empty");
+            // }
         }
     }
 });

@@ -1,112 +1,26 @@
 {
   "users": [
     {
-      "email": "mike@frog.com",
-      "username": "mike",
-      "id": 1
-    },
-    {
-      "email": "nick@nick.com",
-      "username": "foobar",
-      "id": 2
-    },
-    {
-      "email": "jimmy@jim.com",
-      "username": "jimmy",
-      "id": 3
-    },
-    {
-      "email": "tesetUser@cent.com",
-      "username": "testUser",
-      "id": 4
-    },
-    {
-      "email": "Something@something.net",
-      "username": "SomethingSomethingDarkSide",
-      "id": 5
-    },
-    {
       "email": "Somethingelse@something.net",
-      "username": "SomethingelseSomethingDarkSide",
-      "id": 6
-    },
-    {
-      "email": "zxcvxzv@dsfasf",
-      "username": "sdfsaf",
-      "id": 7
-    },
-    {
-      "email": "asedfsadfsad",
-      "username": "asdfsafsaf",
-      "id": 8
-    },
-    {
-      "email": "11111",
-      "username": "111111",
-      "id": 9
-    },
-    {
-      "email": "wewqer",
-      "username": "wqerwqrw",
-      "id": 10
-    },
-    {
-      "email": "sdfsf",
-      "username": "sdfaf",
-      "id": 11
-    },
-    {
-      "email": "dfg",
-      "username": "agf",
-      "id": 12
-    },
-    {
-      "email": "sadfsadf",
-      "username": "sadfasf",
-      "id": 13
+      "username": "Someone Else",
+      "id": 1
     }
   ],
   "friends": [],
   "messages": [
     {
-      "userId": 12,
-      "message": "xzcvzxv",
-      "date": 1534524464128,
+      "userId": 1,
+      "message": "zxv",
+      "date": 1534530205647,
       "id": 1
     },
     {
-      "userId": 12,
-      "message": "xcvxvszv",
-      "date": 1534524465614,
+      "userId": 1,
+      "message": "xcvxCVxV",
+      "date": 1534530207297,
       "id": 2
     }
   ],
-  "events": [
-    {
-      "eventTitle": "sup",
-      "eventContent": "bro",
-      "eventDate": "2018-08-21",
-      "id": 12
-    },
-    {
-      "eventTitle": "event test",
-      "eventContent": "Hey there",
-      "eventDate": "2018-08-15",
-      "id": 13
-    }
-  ],
-  "tasks": [
-    {
-      "task": "asfnqojfwnbeioknqlwef",
-      "taskGoalDate": "2018-08-21",
-      "taskStatus": false,
-      "id": 1
-    },
-    {
-      "task": "Test Task 1",
-      "taskGoalDate": "2018-08-15",
-      "taskStatus": false,
-      "id": 2
-    }
-  ]
+  "events": [],
+  "tasks": []
 }

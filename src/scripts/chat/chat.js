@@ -10,7 +10,7 @@ const chat = Object.create(null, {
             let chatHistory = $("<div></div>").attr("id", "chatHistory");
             let messageArea = $("<textarea></textarea>").attr("id", "messageArea");
             let postButton = $("<button>Post</button>").attr("id", "postButton");
-            $("#chatWindow").append(txt1, chatHistory, messageArea, postButton);
+            $(".chatDiv").append(txt1, chatHistory, messageArea, postButton);
             return chatDBCalls.getchatMessages()
             .then((response) => {
                 makeChat(response)
