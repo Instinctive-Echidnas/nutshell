@@ -2,81 +2,34 @@
   "users": [
     {
       "email": "hchalmers23@gmail.com",
-      "username": "testing ",
+      "username": "helen",
       "id": 1
+    },
+    {
+      "email": "jake@gmail.com",
+      "username": "jake",
+      "id": 2
+    },
+    {
+      "email": "meg@gmail.com",
+      "username": "meg",
+      "id": 3
     }
   ],
   "tasks": [
     {
-      "userId": 1,
-      "task": "Random",
-      "taskGoalDate": "2018-08-15",
+      "userId": 2,
+      "task": "task 1 user 1",
+      "taskGoalDate": "2018-08-29",
       "taskStatus": false,
       "id": 1
     },
     {
       "userId": 1,
-      "task": "testing ",
+      "task": "task1",
       "taskGoalDate": "2018-08-29",
-      "taskStatus": false,
+      "taskStatus": true,
       "id": 2
-    },
-    {
-      "userId": 1,
-      "task": "random",
-      "taskGoalDate": "2018-08-30",
-      "taskStatus": false,
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "task": "Testing 2",
-      "taskGoalDate": "2018-08-29",
-      "taskStatus": false,
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "task": "randommmmm",
-      "taskGoalDate": "2018-08-28",
-      "taskStatus": true,
-      "id": 5
-    },
-    {
-      "userId": 1,
-      "task": "500",
-      "taskGoalDate": "2018-08-30",
-      "taskStatus": true,
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "task": "1",
-      "taskGoalDate": "2018-08-29",
-      "taskStatus": true,
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "task": "1",
-      "taskGoalDate": "2018-08-30",
-      "taskStatus": true,
-      "id": 8
-    },
-    {
-      "userId": 1,
-      "task": "Random",
-      "taskGoalDate": "2018-08-30",
-      "taskStatus": true,
-      "id": 9
-    }
-  ],
-  "events": [
-    {
-      "eventTitle": "testing 1",
-      "eventContent": "testing 2",
-      "eventDate": "2018-08-30",
-      "id": 1
     }
   ],
   "messages": []
