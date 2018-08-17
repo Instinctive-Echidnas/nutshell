@@ -11,12 +11,12 @@
     background-color: rgb(8, 170, 245);
 }
 
-.tasks {
+/* .tasks {
     background-color: bisque;
     width: 500px;
     height: 500px;
     display: flex;
-}
+} */
 
 #newTaskButton {
     object-fit: none;

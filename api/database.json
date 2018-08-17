@@ -1,19 +1,41 @@
 {
-  "posts": [
+  "users": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "email": "hchalmers23@gmail.com",
+      "username": "testing ",
+      "id": 1
     }
   ],
-  "comments": [
+  "tasks": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "userId": 1,
+      "task": "Random",
+      "taskGoalDate": "2018-08-15",
+      "taskStatus": false,
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "task": "testing ",
+      "taskGoalDate": "2018-08-29",
+      "taskStatus": false,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "task": "random",
+      "taskGoalDate": "2018-08-30",
+      "taskStatus": true,
+      "id": 3
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "events": [
+    {
+      "eventTitle": "testing 1",
+      "eventContent": "testing 2",
+      "eventDate": "2018-08-30",
+      "id": 1
+    }
+  ],
+  "messages": []
 }
