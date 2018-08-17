@@ -1,22 +1,11 @@
-@import "chatStyle.css";
+/* commented out this line trying to make chat work with dashboard formatting */
+/* @import "chatStyle.css"; */
 @import 'loginStyle.css';
 @import 'dashboardStyle.css';
-
-/* body {
- background-color: black;
- color: white;
-} */
 
 #taskSaveButton {
     background-color: rgb(8, 170, 245);
 }
-
-/* .tasks {
-    background-color: bisque;
-    width: 500px;
-    height: 500px;
-    display: flex;
-} */
 
 #newTaskButton {
     object-fit: none;

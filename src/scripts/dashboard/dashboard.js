@@ -42,6 +42,9 @@ function dashboard(username) {
     p.innerHTML = `<h2>Welcome to your dashboard, ${username}!</h2>`;
     document.querySelector(".dashboard").appendChild(p);
 
+    // logout button for dashboard needs event listener to clear session storage
+    const logoutBtn = document.createElement("button");
+
     // create a container div for all of the modules to be targeted by flexbox styling
     const moduleContainer = document.createElement("div");
     moduleContainer.setAttribute("class", "moduleContainer");

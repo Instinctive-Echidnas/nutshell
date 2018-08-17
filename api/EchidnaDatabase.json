@@ -4,6 +4,11 @@
       "email": "Somethingelse@something.net",
       "username": "Someone Else",
       "id": 1
+    },
+    {
+      "email": "nick",
+      "username": "nick",
+      "id": 2
     }
   ],
   "friends": [],
