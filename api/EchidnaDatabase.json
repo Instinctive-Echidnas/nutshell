@@ -1,128 +1,58 @@
 {
   "users": [
     {
-      "email": "mike@frog.com",
-      "username": "mike",
+      "email": "Somethingelse@something.net",
+      "username": "Someone Else",
       "id": 1
     },
     {
-      "email": "nick@nick.com",
-      "username": "foobar",
+      "email": "asdfsafsadf",
+      "username": "sagdsagsag",
       "id": 2
     },
     {
-      "email": "jimmy@jim.com",
-      "username": "jimmy",
+      "email": "MaDude@MaDude.com",
+      "username": "MaDude",
       "id": 3
     },
     {
-      "email": "tesetUser@cent.com",
-      "username": "testUser",
+      "email": "DaQueen@DaQueen.com",
+      "username": "I Am Da Queen",
       "id": 4
     },
     {
-      "email": "Something@something.net",
-      "username": "SomethingSomethingDarkSide",
+      "email": "DeWhey@DeWhey.com",
+      "username": "DoUKnowDeWhey",
       "id": 5
-    },
-    {
-      "email": "Somethingelse@something.net",
-      "username": "SomethingelseSomethingDarkSide",
-      "id": 6
-    },
-    {
-      "email": "zxcvxzv@dsfasf",
-      "username": "sdfsaf",
-      "id": 7
-    },
-    {
-      "email": "asedfsadfsad",
-      "username": "asdfsafsaf",
-      "id": 8
-    },
-    {
-      "email": "11111",
-      "username": "111111",
-      "id": 9
-    },
-    {
-      "email": "wewqer",
-      "username": "wqerwqrw",
-      "id": 10
-    },
-    {
-      "email": "sdfsf",
-      "username": "sdfaf",
-      "id": 11
-    },
-    {
-      "email": "dfg",
-      "username": "agf",
-      "id": 12
-    },
-    {
-      "email": "twitter",
-      "username": "tweettweet",
-      "id": 13
     }
   ],
   "friends": [],
   "messages": [
     {
-      "userId": 5,
-      "message": "fgfgagfadsf",
-      "date": 1534522842805,
-      "id": 1
-    }
-  ],
-  "events": [
-    {
-      "eventTitle": "bobobo",
-      "eventContent": "bobobo",
-      "eventDate": "",
+      "userId": 3,
+      "message": "What up Ma Dudes?",
+      "date": 1534535109142,
       "id": 1
     },
     {
-      "eventTitle": "nasonifonaiowf",
-      "eventContent": "noajnsfonqoiwn",
-      "eventDate": "2018-08-16",
+      "userId": 4,
+      "message": "I am Da Queen",
+      "date": 1534535233140,
       "id": 2
-    }
-  ],
-  "tasks": [
-    {
-      "task": "asfnqojfwnbeioknqlwef",
-      "taskGoalDate": "2018-08-21",
-      "taskStatus": false,
-      "id": 1
     },
     {
-      "task": "Test Task 1",
-      "taskGoalDate": "2018-08-15",
-      "taskStatus": false,
-      "id": 2,
-      "userId": 13
-    },
-    {
-      "userId": 13,
-      "task": "boo",
-      "taskGoalDate": "2018-08-02",
-      "taskStatus": false,
+      "userId": 5,
+      "message": "Do you Know De Whey?",
+      "date": 1534535266888,
       "id": 3
     },
     {
-      "userId": 13,
-      "task": "task 2",
-      "taskGoalDate": "2018-08-29",
-      "taskStatus": false,
+      "userId": 3,
+      "message": "IT FUCKING WORKS!",
+      "date": 1534536032020,
       "id": 4
-    },
-    {
-      "userId": 13,
-      "task": "fgafgfaf",
-      "taskGoalDate": "",
-      "taskStatus": true,
-      "id": 5
     }
-  ]
+  ],
+  "events": [],
+  "tasks": []
 }

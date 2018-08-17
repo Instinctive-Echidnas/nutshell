@@ -60,7 +60,7 @@ function dashboard(username) {
     // chat div
     const chatDiv = document.createElement("div");
     chatDiv.setAttribute("class", "chatDiv");
-    chatDiv.textContent = "chatterbox";
+    // chatDiv.textContent = "chatterbox";
     moduleContainer.appendChild(chatDiv);
 
     // article div
@@ -98,6 +98,7 @@ function dashboard(username) {
     chatListeners.postButton();
     chatListeners.deleteButton();
     chatListeners.editButton();
+    chatListeners.saveEditButton();
     event();
     startTask();
     article();
