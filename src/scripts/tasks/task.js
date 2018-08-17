@@ -14,10 +14,11 @@ const transformTask = require("./editedtask");
 //this needs to be wrapped inside of a function******
 function startTask() {
 
-
-
+   const listAllTasks = document.createElement("div");
+   listAllTasks.setAttribute("id","taskListDiv");
+   document.querySelector(".taskDiv").appendChild(listAllTasks);
 //puts the modal to the DOM
-document.querySelector("#taskForm").innerHTML = TasksDomManager.renderTaskModal();
+document.querySelector(".taskDiv").innerHTML += TasksDomManager.renderTaskModal();
 
 //adds an event listener to the  save button and on click something happens. 
 document.querySelector("#taskSaveButton").addEventListener("click", () => {
@@ -44,14 +45,15 @@ document.querySelector("#taskSaveButton").addEventListener("click", () => {
     })
 })
 
+
 //this lists the tasks after refreshing the page.
 function listTasks() {
     //this clears the DOM and then pulls all tasks to the DOM
-    document.querySelector("#tasksList").innerHTML = "";
+    document.getElementById("taskListDiv").innerHTML = "";
     APItasksContent.getTasks().then(result => {
         result.forEach(task => {
             //document.queryselector tells it where in the html to put it and renderContent tells it what to look like.  (as stated in JournalContentDom) ultimately putting it to the dom.
-            document.querySelector("#tasksList").innerHTML += TasksDomManager.renderTask(task);
+            document.getElementById("taskListDiv").innerHTML += TasksDomManager.renderTask(task);
         })
 
     })
@@ -59,7 +61,7 @@ function listTasks() {
 listTasks()
 
 //when the task box is clicked, gets user id from session storage, parses it and stores it in an object.  
-document.querySelector("#tasksList").addEventListener("click", (event) => {
+document.querySelector(".taskDiv").addEventListener("click", (event) => {
     console.log(event);
     let userId = JSON.parse(sessionStorage.getItem("session")).id;
     console.log(userId);

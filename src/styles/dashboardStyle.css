@@ -18,8 +18,8 @@
 .taskDiv {
     background-color: greenyellow;
     padding: 20px;
-    width: 200px;
-    height: 100px;
+    /* width: 200px;
+    height: 100px; */
     border: 1px solid black;
 }
 
