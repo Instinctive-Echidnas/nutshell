@@ -59,6 +59,11 @@
       "email": "dfg",
       "username": "agf",
       "id": 12
+    },
+    {
+      "email": "twitter",
+      "username": "tweettweet",
+      "id": 13
     }
   ],
   "friends": [],
@@ -86,32 +91,20 @@
       "message": "4",
       "date": 1534449518432,
       "id": 4
-    },
-    {
-      "userId": 5,
-      "message": "sadfsadf",
-      "date": 1534516714351,
-      "id": 5
-    },
-    {
-      "userId": 5,
-      "message": "sdfsaf",
-      "date": 1534516715364,
-      "id": 6
     }
   ],
   "events": [
-    {
-      "eventTitle": "sup",
-      "eventContent": "bro",
-      "eventDate": "2018-08-21",
-      "id": 12
-    },
     {
       "eventTitle": "event test",
       "eventContent": "Hey there",
       "eventDate": "2018-08-15",
       "id": 13
+    },
+    {
+      "eventTitle": "Fuck communication",
+      "eventContent": "                                I have a new frame of consciousness now that I'm no longer sober and I can be arouhnd people\n            \n            ",
+      "eventDate": "2018-08-17",
+      "id": 14
     }
   ],
   "tasks": [
