@@ -44,6 +44,16 @@
       "email": "11111",
       "username": "111111",
       "id": 9
+    },
+    {
+      "email": "ktygcdxytkxcyktx",
+      "username": "yvluyvfyuvfclyuc",
+      "id": 10
+    },
+    {
+      "email": "asoihnioqhnwf0u91u093r",
+      "username": "i3hjf90jh019jh0f9h109f2",
+      "id": 11
     }
   ],
   "friends": [],
@@ -101,6 +111,12 @@
       "message": "sup",
       "date": 1534463405982,
       "id": 9
+    },
+    {
+      "userId": 5,
+      "message": "kewinfaioionafiw",
+      "date": 1534513700370,
+      "id": 10
     }
   ],
   "events": [
@@ -129,5 +145,12 @@
       "id": 13
     }
   ],
-  "tasks": []
+  "tasks": [
+    {
+      "task": "asfnqojfwnbeioknqlwef",
+      "taskGoalDate": "2018-08-21",
+      "taskStatus": true,
+      "id": 1
+    }
+  ]
 }

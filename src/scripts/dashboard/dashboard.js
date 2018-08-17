@@ -42,6 +42,7 @@ function dashboard(username) {
 //_______________________________________________INIT DANIEL'S CHAT__________________________________________
     chat.createWindow();
     event();
+    startTask();
 }
 
     //vvvvvvvvvvvvvvvvv THIS IS THE EVENT LISTERNER FOR THE CHAT POST vvvvvvvvvvvvvvvvvvvvvvv
@@ -144,6 +145,6 @@ function dashboard(username) {
     console.log("starting Helen");
 
 //The task section 
-    startTask();
+    
 
 module.exports = dashboard;
