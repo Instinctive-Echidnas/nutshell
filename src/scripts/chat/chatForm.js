@@ -1,6 +1,7 @@
 //vvvvvvvvvvvvvvvvv THIS AREA BELOW POPULATES THE #chatWindow WITH CURRENT DATA FROM API THAT IS PASSED INTO IT vvvvvvvvvvvvvvvvvvvvvvv
 makeChat = (response) => {
     response.reverse().forEach((element, index) => {
+        let activeUser = JSON.parse(sessionStorage.getItem("session"));
         let messageBox = $("<div></div>").attr("id", `messageBox--${index}`).attr("class", "messages");
         let messageArea = $("<div></div>").attr("class", "chatMessage").text(`${element.message}`);
         let userBox = $("<div></div>").attr("class", "userName").text(`${element.userId}`);

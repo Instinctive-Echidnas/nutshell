@@ -45,6 +45,7 @@ function dashboard(username) {
     chatListeners.postButton();
     chatListeners.deleteButton();
     chatListeners.editButton();
+    chatListeners.saveEditButton();
     event();
     startTask();
 }
