@@ -13,8 +13,8 @@ chatListeners = {
     },
 //vvvvvvvvvvvvvvvvv THIS IS THE EVENT LISTERNER FOR THE CHAT DELETE vvvvvvvvvvvvvvvvvvvvvvv
     deleteButton: () => {document.querySelector("body").addEventListener("click", (evt) => {
-        console.log(evt)
-        console.log(evt.target.id)
+        //console.log(evt)
+        // console.log(evt.target.id)
         if (evt.target.id.includes(`deletechatButton--${evt.target.id.split("--")[1]}`)) {
             console.log("delete button clicked");
             const id = parseInt(evt.target.id.split("--")[1]);
@@ -26,8 +26,8 @@ chatListeners = {
     },
 //vvvvvvvvvvvvvvvvv THIS IS THE EVENT LISTERNER FOR EDITING THE EXISTING CHAT vvvvvvvvvvvvvvvvvvvvvvv
     editButton: () => {document.querySelector("body").addEventListener("click", (evt) => {
-        console.log(evt)
-        console.log(evt.target.id)
+        // console.log(evt)
+        // console.log(evt.target.id)
         if (evt.target.id.includes(`editchatButton--${evt.target.id.split("--")[1]}`)) {
             console.log("edit button clicked");
             const id = parseInt(evt.target.id.split("--")[1]);

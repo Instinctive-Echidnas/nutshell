@@ -1,6 +1,6 @@
 const entryComponent = require("events/eventForm.js");
 const eventList = require("events/eventList.js")
-const dataManager = require("events/eventdataManager.js")
+const dataManager = require("events/eventdatamanager.js")
 const eventListComponent = require("events/eventListComponent.js")
 
 const eventModule = function (){
