@@ -24,6 +24,16 @@
       "email": "DeWhey@DeWhey.com",
       "username": "DoUKnowDeWhey",
       "id": 5
+    },
+    {
+      "email": "mark@gmail.com",
+      "username": "mark",
+      "id": 6
+    },
+    {
+      "email": "helen@gmail.com",
+      "username": "helen",
+      "id": 7
     }
   ],
   "friends": [],
@@ -54,5 +64,20 @@
     }
   ],
   "events": [],
-  "tasks": []
+  "tasks": [
+    {
+      "userId": 6,
+      "task": "Random",
+      "taskGoalDate": "2018-08-30",
+      "taskStatus": true,
+      "id": 1
+    },
+    {
+      "userId": 6,
+      "task": "2nd task",
+      "taskGoalDate": "2018-08-30",
+      "taskStatus": true,
+      "id": 2
+    }
+  ]
 }
