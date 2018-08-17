@@ -6,6 +6,7 @@
 const chat = require("../chat/chat.js");
 const chatListeners = require("../chat/chatListeners.js");
 const startTask = require("../tasks/task.js");
+const editedtask = require("../tasks/editedtask.js");
 
 const event = require("../events/event.js");
 
