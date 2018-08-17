@@ -18,6 +18,10 @@ chatDBCalls = {
         })
         .then(r => r.json())
     },
+    getUser: (id) => {
+        return fetch(`http://localhost:8088/users/${id}`)
+            .then(response => response.json())
+        },
     editchatMessage: (id, updatedMessage) => {
         return fetch(`http://localhost:8088/messages/${id}`, {
             method: "PATCH",
