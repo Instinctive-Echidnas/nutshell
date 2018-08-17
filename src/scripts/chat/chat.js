@@ -10,7 +10,7 @@ const chat = Object.create(null, {
             let chatHistory = $("<div></div>").attr("id", "chatHistory");
             let messageArea = $("<textarea></textarea>").attr("id", "messageArea");
             let postButton = $("<button>Post</button>").attr("id", "postButton");
-            $("#chatWindow").append(txt1, chatHistory, messageArea, postButton);
+            $(".chatDiv").append(txt1, chatHistory, messageArea, postButton);
             return chatDBCalls.getchatMessages()
             .then((response) => {
                 makeChat(response)
@@ -20,8 +20,9 @@ const chat = Object.create(null, {
     //vvvvvvvvvvvvvvvvv postMessage GENERATES AN OBJECT BASED ON CURRENT VALUES OF #messageArea and POSTS IT TO API vvvvvvvvvvvvvvvvvvvvvvv
     postMessage: {
         value: () => {
+            let activeUser = JSON.parse(sessionStorage.getItem("session"));
             const newEntry = {
-                userId: 5,
+                userId: activeUser.id,
                 message: document.querySelector("#messageArea").value,
                 date: Date.now(),
             }
@@ -49,41 +50,29 @@ const chat = Object.create(null, {
     //vvvvvvvvvvvvvvvvv THIS CALLS ON DATABASE MANAGER TO EDIT A PREVIOUSLY POSTED MESSAGE vvvvvvvvvvvvvvvvvvvvvvv
     editMessage: {
         value: (id) => {
+            let newDiv = $("<div></div>").attr("id", `editBlock--${id}`);
             let editTitle = $("<h3></h3>").text("Edit Your Message");
             let editMessageArea = $("<textarea></textarea>").attr("id", "editMessageArea");
-            let editButton = $("<button>Post</button>").attr("id", "postButton");
-            $(`#editchatButton--${id}`).append(editTitle, editMessageArea, editButton);
-            chatDBCalls.getchatMessages()
-            .then((response) => {
-                document.querySelector("#chatHistory").innerHTML = "";
-                makeChat(response)
-            })
+            let editButton = $("<button>Confirm Edit</button>").attr("id", `confirmEdit--${id}`);
+            newDiv.append(editTitle, editMessageArea, editButton);
+            $(`#messageBox--${id-1}`).append(newDiv);
         }
-        // let something = () => {
-        //     const newEntry = {
-        //         userId: 5,
-        //         message: document.querySelector("#messageArea").value,
-        //         date: Date.now(),
-        //     }
-        //     savechatMessage(newEntry)
-        //         .then(() => {
-        //             document.querySelector("#chatHistory").value = "";
-        //             document.querySelector("#messageArea").value = "";
-        //         })
-        //         .then(() => { return getchatMessages() })
-        //         .then((result) => {
-        //             document.querySelector("#chatHistory").innerHTML = "";
-        //             result.reverse().forEach((element, index) => {
-        //                 let messageBox = $("<div></div>").attr("id", `messageBox--${index}`).attr("class", "messages");
-        //                 let messageArea = $("<div></div>").attr("class", "chatMessage").text(`${element.message}`);
-        //                 let userBox = $("<div></div>").attr("class", "userName").text(`${element.userId}`);
-        //                 $(messageBox).append(userBox, messageArea);
-        //                 $("#chatHistory").append(messageBox);
-        //                 $("#chatHistory").scrollTop($("#chatHistory")[0].scrollHeight)
-        //             })
-        //         })
-        // }
     },
+    postEditedMessage: {
+        value: (id) => {
+            const entryEdit = {
+                message: document.querySelector("#editMessageArea").value,
+            }
+            chatDBCalls.editchatMessage(id, entryEdit)
+                .then(() => {
+                    return chatDBCalls.getchatMessages()
+                })
+                .then((result) => {
+                    document.querySelector("#chatHistory").innerHTML = "";
+                    makeChat(result)
+                })
+            }
+        }
 })
 
 module.exports = chat
