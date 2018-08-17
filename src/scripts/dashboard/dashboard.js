@@ -4,8 +4,12 @@
 
 // i had to use ../chat as opposed to ./chat which it was
 const chat = require("../chat/chat.js");
+const chatListeners = require("../chat/chatListeners.js");
 const startTask = require("../tasks/task.js");
 const article = require("../article/article.js");
+const editedtask = require("../tasks/editedtask.js");
+
+const event = require("../events/event.js");
 
 // passing in the username from session storage for custom welcome
 function dashboard(username) {
@@ -92,49 +96,18 @@ function dashboard(username) {
 
 //_______________________________________________INIT DANIEL'S CHAT__________________________________________
     chat.createWindow();
-
-    //vvvvvvvvvvvvvvvvv THIS IS THE EVENT LISTERNER FOR THE CHAT POST vvvvvvvvvvvvvvvvvvvvvvv
-    document.querySelector("body").addEventListener("click", (evt) => {
-        let x = evt.target.id;
-        if (x === "postButton") {
-            chat.postMessage();
-        }
-    })
-
-    //vvvvvvvvvvvvvvvvv THIS IS THE EVENT LISTERNER FOR THE CHAT DELETE vvvvvvvvvvvvvvvvvvvvvvv
-    document.querySelector("body").addEventListener("click", (evt) => {
-        console.log(evt)
-        console.log(evt.target.id)
-        if (evt.target.id.includes(`deletechatButton--${evt.target.id.split("--")[1]}`)) {
-            console.log("delete button clicked");
-            const id = parseInt(evt.target.id.split("--")[1]);
-            console.log(id);
-            event.target.parentElement.remove();
-            chat.deleteMessage(id)
-        }
-    })
-    //vvvvvvvvvvvvvvvvv THIS IS THE EVENT LISTERNER FOR EDITING THE EXISTING CHAT vvvvvvvvvvvvvvvvvvvvvvv
-    document.querySelector("body").addEventListener("click", (evt) => {
-        console.log(evt)
-        console.log(evt.target.id)
-        if (evt.target.id.includes(`editchatButton--${evt.target.id.split("--")[1]}`)) {
-            console.log("edit button clicked");
-            const id = parseInt(evt.target.id.split("--")[1]);
-            console.log(id);
-            event.target.parentElement.remove();
-            chat.editMessage(id)
-        }
-    })
+    chatListeners.postButton();
+    chatListeners.deleteButton();
+    chatListeners.editButton();
+    event();
+    startTask();
+    article();
+}
 //_______________________________________________END OF CHAT__________________________________________
 
 
 
 //The task section 
-    startTask();
-
-    // call article function to populate article div with article module
-    article();
-
-}
+    
 
 module.exports = dashboard;

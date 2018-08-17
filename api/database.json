@@ -1,0 +1,41 @@
+{
+  "users": [
+    {
+      "email": "hchalmers23@gmail.com",
+      "username": "testing ",
+      "id": 1
+    }
+  ],
+  "tasks": [
+    {
+      "userId": 1,
+      "task": "Random",
+      "taskGoalDate": "2018-08-15",
+      "taskStatus": false,
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "task": "testing ",
+      "taskGoalDate": "2018-08-29",
+      "taskStatus": false,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "task": "random",
+      "taskGoalDate": "2018-08-30",
+      "taskStatus": true,
+      "id": 3
+    }
+  ],
+  "events": [
+    {
+      "eventTitle": "testing 1",
+      "eventContent": "testing 2",
+      "eventDate": "2018-08-30",
+      "id": 1
+    }
+  ],
+  "messages": []
+}

@@ -46,31 +46,77 @@
       "id": 9
     },
     {
-      "email": "nick",
-      "username": "nick",
+      "email": "wewqer",
+      "username": "wqerwqrw",
       "id": 10
     },
     {
-      "email": "spoon",
-      "username": "fork",
+      "email": "sdfsf",
+      "username": "sdfaf",
       "id": 11
     },
     {
-      "email": "",
-      "username": "",
+      "email": "dfg",
+      "username": "agf",
       "id": 12
+    },
+    {
+      "email": "twitter",
+      "username": "tweettweet",
+      "id": 13
     }
   ],
   "friends": [],
   "messages": [
     {
       "userId": 5,
-      "message": "",
-      "date": 1534458193944,
+      "message": "fgfgagfadsf",
+      "date": 1534522842805,
       "id": 1
     }
   ],
-  "events": [],
-  "tasks": [],
-  "articles": []
+  "events": [
+    {
+      "eventTitle": "bobobo",
+      "eventContent": "bobobo",
+      "eventDate": "",
+      "id": 1
+    }
+  ],
+  "tasks": [
+    {
+      "task": "asfnqojfwnbeioknqlwef",
+      "taskGoalDate": "2018-08-21",
+      "taskStatus": false,
+      "id": 1
+    },
+    {
+      "task": "Test Task 1",
+      "taskGoalDate": "2018-08-15",
+      "taskStatus": false,
+      "id": 2,
+      "userId": 13
+    },
+    {
+      "userId": 13,
+      "task": "boo",
+      "taskGoalDate": "2018-08-02",
+      "taskStatus": false,
+      "id": 3
+    },
+    {
+      "userId": 13,
+      "task": "task 2",
+      "taskGoalDate": "2018-08-29",
+      "taskStatus": false,
+      "id": 4
+    },
+    {
+      "userId": 13,
+      "task": "fgafgfaf",
+      "taskGoalDate": "",
+      "taskStatus": true,
+      "id": 5
+    }
+  ]
 }
