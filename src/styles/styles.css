@@ -2,10 +2,10 @@
 @import 'loginStyle.css';
 @import 'dashboardStyle.css';
 
-body {
-/*  background-color: black;
-/* color: white; */
-}
+/* body {
+ background-color: black;
+ color: white;
+} */
 
 #taskSaveButton {
     background-color: rgb(8, 170, 245);

@@ -89,17 +89,43 @@
     },
     {
       "userId": 5,
-      "message": "5",
-      "date": 1534516182447,
+      "message": "sadfsadf",
+      "date": 1534516714351,
       "id": 5
     },
     {
       "userId": 5,
-      "message": "6",
-      "date": 1534516183343,
+      "message": "sdfsaf",
+      "date": 1534516715364,
       "id": 6
     }
   ],
-  "events": [],
-  "tasks": []
+  "events": [
+    {
+      "eventTitle": "sup",
+      "eventContent": "bro",
+      "eventDate": "2018-08-21",
+      "id": 12
+    },
+    {
+      "eventTitle": "event test",
+      "eventContent": "Hey there",
+      "eventDate": "2018-08-15",
+      "id": 13
+    }
+  ],
+  "tasks": [
+    {
+      "task": "asfnqojfwnbeioknqlwef",
+      "taskGoalDate": "2018-08-21",
+      "taskStatus": false,
+      "id": 1
+    },
+    {
+      "task": "Test Task 1",
+      "taskGoalDate": "2018-08-15",
+      "taskStatus": true,
+      "id": 2
+    }
+  ]
 }
