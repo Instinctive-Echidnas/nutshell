@@ -41,15 +41,15 @@
 
 }
 
-.articleDiv button {
-    /* width: 2em; */
-}
+/* .articleDiv button {
+    width: 2em;
+} */
 
 .eventDiv {
     background-color: mediumaquamarine;
     padding: 20px;
-    width: 200px;
-    height: 100px;
+    /* width: 200px;
+    height: 100px; */
     border: 1px solid black;
 }
 
