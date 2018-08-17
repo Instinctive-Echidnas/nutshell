@@ -1,12 +1,11 @@
-body {
-    background-color: white;
-    color: black;
-}
+@import "chatStyle.css";
+@import 'loginStyle.css';
+@import 'dashboardStyle.css';
 
-#chatWindow {
-    width: 50%;
-    margin: auto;
-}
+/* body {
+ background-color: black;
+ color: white;
+} */
 
 #taskSaveButton {
     background-color: rgb(8, 170, 245);
@@ -19,8 +18,9 @@ body {
     display: flex;
 }
 
-newTaskButton {
+#newTaskButton {
     object-fit: none;
     object-position: 50% 80%;
 
 }
+

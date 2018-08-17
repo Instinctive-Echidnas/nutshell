@@ -1,48 +1,89 @@
+const makeChat = require("./chatForm.js");
+const chatDBCalls = require("./chatDBCalls.js");
+
 const chat = Object.create(null, {
+    //vvvvvvvvvvvvvvvvv CreateWindow MAKES THE HTML FOR CHAT & POPULATES WITH CURRENT DATA vvvvvvvvvvvvvvvvvvvvvvv
     createWindow: {
         value: () => {
             console.log("Create Chat Window");
             let txt1 = $("<h3></h3>").text("Chat");
             let chatHistory = $("<div></div>").attr("id", "chatHistory");
             let messageArea = $("<textarea></textarea>").attr("id", "messageArea");
-            $("#chatWindow").append(txt1, chatHistory, messageArea);
-            }
+            let postButton = $("<button>Post</button>").attr("id", "postButton");
+            $("#chatWindow").append(txt1, chatHistory, messageArea, postButton);
+            return chatDBCalls.getchatMessages()
+            .then((response) => {
+                makeChat(response)
+            })
+        }
     },
+    //vvvvvvvvvvvvvvvvv postMessage GENERATES AN OBJECT BASED ON CURRENT VALUES OF #messageArea and POSTS IT TO API vvvvvvvvvvvvvvvvvvvvvvv
     postMessage: {
         value: () => {
-            console.log("Posted Message");
-            let txt1 = $("<h3></h3>").text("Chat");
-            let chatHistory = $("<div></div>").attr("id", "chatHistory");
-            let txt2 = $("<textarea></textarea>");
-            let txt3 = $("<strong></strong>").text("Text.");
-            $("#chatWindow").append(txt1, chatHistory, txt2, txt3);
+            const newEntry = {
+                userId: 5,
+                message: document.querySelector("#messageArea").value,
+                date: Date.now(),
             }
-    }
+            chatDBCalls.savechatMessage(newEntry)
+                .then(() => {
+                    document.querySelector("#chatHistory").value = "";
+                    document.querySelector("#messageArea").value = "";
+                })
+                //THEN CALLS ON DATABASE MANAGER TO GET DATA AND GENERATE THE CHAT WINDOW AGAIN WITH CURRENT DATA vvvvvvvvvvvvvvvvvvvvvvv
+                .then(() => {
+                    return chatDBCalls.getchatMessages()
+                })
+                .then((result) => {
+                    document.querySelector("#chatHistory").innerHTML = "";
+                    makeChat(result)
+                })
+            }
+        },
+    //vvvvvvvvvvvvvvvvv THIS CALLS ON DATABASE MANAGER TO DELETE THE MESSAGE BASED ON ID vvvvvvvvvvvvvvvvvvvvvvv
+    deleteMessage: {
+        value: (id) => {
+            chatDBCalls.deletechatMessage(id);
+        },
+    },
+    //vvvvvvvvvvvvvvvvv THIS CALLS ON DATABASE MANAGER TO EDIT A PREVIOUSLY POSTED MESSAGE vvvvvvvvvvvvvvvvvvvvvvv
+    editMessage: {
+        value: (id) => {
+            let editTitle = $("<h3></h3>").text("Edit Your Message");
+            let editMessageArea = $("<textarea></textarea>").attr("id", "editMessageArea");
+            let editButton = $("<button>Post</button>").attr("id", "postButton");
+            $(`#editchatButton--${id}`).append(editTitle, editMessageArea, editButton);
+            chatDBCalls.getchatMessages()
+            .then((response) => {
+                document.querySelector("#chatHistory").innerHTML = "";
+                makeChat(response)
+            })
+        }
+        // let something = () => {
+        //     const newEntry = {
+        //         userId: 5,
+        //         message: document.querySelector("#messageArea").value,
+        //         date: Date.now(),
+        //     }
+        //     savechatMessage(newEntry)
+        //         .then(() => {
+        //             document.querySelector("#chatHistory").value = "";
+        //             document.querySelector("#messageArea").value = "";
+        //         })
+        //         .then(() => { return getchatMessages() })
+        //         .then((result) => {
+        //             document.querySelector("#chatHistory").innerHTML = "";
+        //             result.reverse().forEach((element, index) => {
+        //                 let messageBox = $("<div></div>").attr("id", `messageBox--${index}`).attr("class", "messages");
+        //                 let messageArea = $("<div></div>").attr("class", "chatMessage").text(`${element.message}`);
+        //                 let userBox = $("<div></div>").attr("class", "userName").text(`${element.userId}`);
+        //                 $(messageBox).append(userBox, messageArea);
+        //                 $("#chatHistory").append(messageBox);
+        //                 $("#chatHistory").scrollTop($("#chatHistory")[0].scrollHeight)
+        //             })
+        //         })
+        // }
+    },
 })
 
-// const formManager = Object.create(null, {
-//     clearForm: {
-//         value: () => {
-//             document.querySelector("#journalTitleInput").value = "";
-//             document.querySelector("#journalTextInput").value = "";
-//         }
-//     },
-//     makeForm: {
-//         value: () => {
-//             console.log("Form function invoked");
-//             return `
-//             <fieldset>
-//                 <label for="journalTitle">Journal Title:</label>
-//                 <br>
-//                 <input required type="text" id="journalTitleInput">
-//             </fieldset>
-//             <fieldset>
-//                 <label for="journalText">Journal Text:</label>
-//                 <br>
-//                 <textarea id="journalTextInput"></textarea>
-//             </fieldset>
-//             <button id="saveEntryButton">Save Journal Entry</button>
-//             `}
-//         }
-// })
 module.exports = chat

@@ -1,0 +1,121 @@
+{
+  "users": [
+    {
+      "email": "mike@frog.com",
+      "username": "mike",
+      "id": 1
+    },
+    {
+      "email": "blah",
+      "username": "blahblah",
+      "id": 2
+    },
+    {
+      "email": "hey",
+      "username": "there",
+      "id": 3
+    },
+    {
+      "email": "sup",
+      "username": "bro",
+      "id": 4
+    },
+    {
+      "email": "jkbkjbjkbkjb",
+      "username": "fcfcyitcitygvuov",
+      "id": 5
+    }
+  ],
+  "messages": [
+    {
+      "userId": 5,
+      "message": "1",
+      "date": 1534449515553,
+      "id": 1
+    },
+    {
+      "userId": 5,
+      "message": "2",
+      "date": 1534449516651,
+      "id": 2
+    },
+    {
+      "userId": 5,
+      "message": "3",
+      "date": 1534449517543,
+      "id": 3
+    },
+    {
+      "userId": 5,
+      "message": "4",
+      "date": 1534449518432,
+      "id": 4
+    },
+    {
+      "userId": 5,
+      "message": "5",
+      "date": 1534449519329,
+      "id": 5
+    },
+    {
+      "userId": 5,
+      "message": "6",
+      "date": 1534449520293,
+      "id": 6
+    },
+    {
+      "userId": 5,
+      "message": "sup",
+      "date": 1534462898294,
+      "id": 7
+    }
+  ],
+  "news": [],
+  "friends": [
+    {
+      "connectionId": 1,
+      "userId": 1,
+      "friendId": 3
+    }
+  ],
+  "tasks": [
+    {
+      "task": "nlknln",
+      "taskGoalDate": "2018-08-21",
+      "taskStatus": false,
+      "id": 1
+    }
+  ],
+  "events": [
+    {
+      "eventTitle": "sup",
+      "eventContent": "dude",
+      "eventDate": "2018-08-11",
+      "id": 5
+    },
+    {
+      "eventTitle": "there",
+      "eventContent": "there",
+      "eventDate": "2018-08-18",
+      "id": 6
+    },
+    {
+      "eventTitle": "hello",
+      "eventContent": "hi there",
+      "eventDate": "2018-08-14",
+      "id": 7
+    },
+    {
+      "eventTitle": "sup",
+      "eventContent": "bro",
+      "eventDate": "2018-08-21",
+      "id": 12
+    },
+    {
+      "eventTitle": "hello",
+      "eventContent": "my stuff works",
+      "eventDate": "2018-08-24",
+      "id": 13
+    }
+  ]
+}
