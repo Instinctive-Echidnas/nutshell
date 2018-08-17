@@ -6,13 +6,13 @@ const eventListComponent = require("events/eventListComponent.js")
 const eventModule = function (){
 const eventSectionDiv = document.createElement("div");
 eventSectionDiv.setAttribute("id", "eventSection");
-document.querySelector(".dashboard").appendChild(eventSectionDiv);
+document.querySelector(".eventDiv").appendChild(eventSectionDiv);
 dataManager.getAllEvents().then(events =>{events.map(event => {eventListComponent(event), document.getElementById("eventSection").innerHTML+=eventListComponent(event)
 })})
 const makeEventFormButton = document.createElement("BUTTON");
 makeEventFormButton.setAttribute("id", "eventForm");
 makeEventFormButton.innerHTML="Add Event";
-document.querySelector(".dashboard").appendChild(makeEventFormButton);
+document.querySelector(".eventDiv").appendChild(makeEventFormButton);
 const addButton = document.querySelector("#eventForm");
 
 //list all of the events currently in the database
