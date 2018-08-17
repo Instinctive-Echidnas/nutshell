@@ -4,21 +4,53 @@
       "email": "Somethingelse@something.net",
       "username": "Someone Else",
       "id": 1
+    },
+    {
+      "email": "asdfsafsadf",
+      "username": "sagdsagsag",
+      "id": 2
+    },
+    {
+      "email": "MaDude@MaDude.com",
+      "username": "MaDude",
+      "id": 3
+    },
+    {
+      "email": "DaQueen@DaQueen.com",
+      "username": "I Am Da Queen",
+      "id": 4
+    },
+    {
+      "email": "DeWhey@DeWhey.com",
+      "username": "DoUKnowDeWhey",
+      "id": 5
     }
   ],
   "friends": [],
   "messages": [
     {
-      "userId": 1,
-      "message": "zxv",
-      "date": 1534530205647,
+      "userId": 3,
+      "message": "What up Ma Dudes?",
+      "date": 1534535109142,
       "id": 1
     },
     {
-      "userId": 1,
-      "message": "xcvxCVxV",
-      "date": 1534530207297,
+      "userId": 4,
+      "message": "I am Da Queen",
+      "date": 1534535233140,
       "id": 2
+    },
+    {
+      "userId": 5,
+      "message": "Do you Know De Whey?",
+      "date": 1534535266888,
+      "id": 3
+    },
+    {
+      "userId": 3,
+      "message": "IT FUCKING WORKS!",
+      "date": 1534536032020,
+      "id": 4
     }
   ],
   "events": [],
