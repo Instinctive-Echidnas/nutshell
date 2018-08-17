@@ -44,6 +44,15 @@ function dashboard(username) {
 
     // logout button for dashboard needs event listener to clear session storage
     const logoutBtn = document.createElement("button");
+    const logoutTextNode = document.createTextNode("logout");
+    logoutBtn.appendChild(logoutTextNode);
+    dashboardRef.appendChild(logoutBtn);
+
+    logoutBtn.addEventListener("click", function logout() {
+        // clear session storage and call welcome() after clearing page
+        sessionStorage.removeItem("session");
+        location.reload();
+    });
 
     // create a container div for all of the modules to be targeted by flexbox styling
     const moduleContainer = document.createElement("div");
