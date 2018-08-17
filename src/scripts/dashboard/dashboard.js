@@ -6,6 +6,8 @@
 const chat = require("../chat/chat.js");
 const startTask = require("../tasks/task.js");
 
+const event = require("../events/event.js");
+
 // passing in the username from session storage for custom welcome
 function dashboard(username) {
     // before I load dashboard, I need to clear the dom container in order to get rid of login/registration information when new user created
@@ -39,6 +41,9 @@ function dashboard(username) {
 
 //_______________________________________________INIT DANIEL'S CHAT__________________________________________
     chat.createWindow();
+    event();
+    startTask();
+}
 
     //vvvvvvvvvvvvvvvvv THIS IS THE EVENT LISTERNER FOR THE CHAT POST vvvvvvvvvvvvvvvvvvvvvvv
     document.querySelector("body").addEventListener("click", (evt) => {
@@ -140,6 +145,6 @@ function dashboard(username) {
     console.log("starting Helen");
 
 //The task section 
-    startTask();}
+    
 
 module.exports = dashboard;
