@@ -27,6 +27,15 @@ const loginDataManager = Object.create(null, {
         }
     },
 
+    createUser: {
+        value: (user) => {
+            loginDataManager.saveUser(user).then((returnedUser) => {
+            // add user to session storage to preserve them
+            sessionStorage.setItem("session", JSON.stringify(returnedUser));
+            });
+        }
+    },
+
     /**
      * Purpose:  Checks to see if user passed in matches user in database.json file.
      * If there is not a match, we know the user is unique and so we create the user and add to session storage
@@ -72,15 +81,7 @@ const loginDataManager = Object.create(null, {
                 // let us check if userExists is false and create user if so
                 if (!(userExists)) {
                     // userExists = false, we can create user.
-                    console.log("user doesn't exist so creating them");
-                    loginDataManager.saveUser(user).then((returnedUser) => {
-                        // set userObject equal to returned user to preserve this for setting later in storage
-                        userObject = returnedUser;
-                        // get user id to add and set to user.id which modifies the saved user in welcome.js
-                        console.log(returnedUser);
-                        // add user to session storage to preserve them
-                        sessionStorage.setItem("session", JSON.stringify(returnedUser));
-                    });
+                    loginDataManager.createUser(user);
 
                     // take user to Dashboard
                     dashboard(user.username);
