@@ -1,17 +1,15 @@
 /**
- * Dashboard should require every individual module that we want displayed outside of login/welcome/registration page
+ * Purpose:  To tie together each resource in the DB and display it to DOM in an ordered manner
  */
 
-// i had to use ../chat as opposed to ./chat which it was
 const chat = require("../chat/chat.js");
 const chatListeners = require("../chat/chatListeners.js");
 const startTask = require("../tasks/task.js");
 const article = require("../article/article.js");
 const editedtask = require("../tasks/editedtask.js");
-
 const event = require("../events/event.js");
 
-// passing in the username from session storage for custom welcome
+// passing in the username from session storage for custom welcome message
 function dashboard(username) {
     // before I load dashboard, I need to clear the dom container in order to get rid of login/registration information when new user created
     const myDiv = document.createElement("div");
@@ -67,11 +65,7 @@ function dashboard(username) {
     // task div -- in startTask() function, append everything to .taskDiv
     const taskDiv = document.createElement("div");
     taskDiv.setAttribute("class", "taskDiv");
-    // taskDiv.textContent = "tasks";
     moduleContainer.appendChild(taskDiv);
-    // const taskContainerDiv = document.createElement("div");
-    // taskContainerDiv.setAttribute("id", "taskListDiv");
-    // document.querySelector(".taskDiv").appendChild(taskContainerDiv);
 
     // chat div
     const chatDiv = document.createElement("div");
@@ -117,12 +111,8 @@ function dashboard(username) {
     event();
     startTask();
     article();
+    //_______________________________________________END OF CHAT__________________________________________
+
 }
-//_______________________________________________END OF CHAT__________________________________________
-
-
-
-//The task section 
-    
 
 module.exports = dashboard;

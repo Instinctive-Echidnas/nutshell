@@ -1,3 +1,7 @@
+/**
+ * Purpose: to encapsulate functions necessary to work on data for login and articles
+ */
+
 // rather than make a specific data manager for articles, I'm going to include the necessary functions here
 
 // requiring dashboard so can invoke dashboard function in validateUser
@@ -53,9 +57,6 @@ const loginDataManager = Object.create(null, {
             // var to account if user exists or not
             let userExists = false;
 
-            // keep track of userObject being returned later in promise
-            let userObject = user;
-
             // get users first in order to search through them for user passed in
             loginDataManager.getUsers().then(response => {
                 // response now is a reference to the users
@@ -64,7 +65,7 @@ const loginDataManager = Object.create(null, {
                     userName = element.username;
                     myMatchedUser = element;
 
-                    // i want to use toUpperCase so that email and usernames are not case sensitive
+                    // using toUpperCase so that email and usernames are not case sensitive
                     if ((email.toUpperCase() === userEmail.toUpperCase()) || (name.toUpperCase() === userName.toUpperCase())) {
                         // change userExists to true and break or return
                         userExists = true;
@@ -73,20 +74,10 @@ const loginDataManager = Object.create(null, {
                         // log user in
                         // add user to session storage to preserve them
                         sessionStorage.setItem("session", JSON.stringify(myMatchedUser));
-                        // take user to dashboard by invoking dashboard(user.username);
-                        dashboard(user.username);
+                        // instead of returning and calling dashboard on welcome just reload page and let main.js work
+                        location.reload();
                     }
                 }); // forEach
-
-                // let us check if userExists is false and create user if so
-                if (!(userExists)) {
-                    // userExists = false, we can create user.
-                    loginDataManager.createUser(user);
-
-                    // take user to Dashboard
-                    dashboard(user.username);
-                }  // if user does not exist
-
             });
         }
     },

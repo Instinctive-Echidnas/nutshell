@@ -1,14 +1,8 @@
-// const chat = require("./chat/chat.js");
+/**
+ * Entry point of application -- branch to welcome/registration or dashboard if session id exists or doesn't
+ */
+
 const welcome = require("./login/welcome.js");
-
-
-console.log("Hello main.js");
-
-
-
-
-// -------------Dashboard Section --------------
-
 const dashboard = require("./dashboard/dashboard.js");
 
 // set login as reference to session storage item
@@ -24,10 +18,3 @@ if (login === null) {
    // we must have session storage which means there is an active user
    dashboard(login.username);
 }
-
-
-//-----------------End of Dashboard------------------------------
-
-
-
-
