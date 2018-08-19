@@ -9,23 +9,36 @@
       "email": "nick",
       "username": "nick",
       "id": 2
+    },
+    {
+      "email": "aldkadfkasdfkld",
+      "username": "squirrellman",
+      "id": 3
     }
   ],
   "friends": [],
   "messages": [
     {
-      "userId": 1,
-      "message": "zxv",
-      "date": 1534530205647,
+      "userId": 2,
+      "message": "dzfadfadsf",
+      "date": 1534538436928,
       "id": 1
     },
     {
-      "userId": 1,
-      "message": "xcvxCVxV",
-      "date": 1534530207297,
+      "userId": 2,
+      "message": "xcadadsc",
+      "date": 1534687694334,
       "id": 2
     }
   ],
   "events": [],
-  "tasks": []
+  "tasks": [
+    {
+      "userId": 2,
+      "task": "afdfa",
+      "taskGoalDate": "2018-08-15",
+      "taskStatus": true,
+      "id": 1
+    }
+  ]
 }

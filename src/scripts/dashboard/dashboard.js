@@ -44,6 +44,7 @@ function dashboard(username) {
 
     // logout button for dashboard needs event listener to clear session storage
     const logoutBtn = document.createElement("button");
+    logoutBtn.setAttribute("class", "logoutButton");
     const logoutTextNode = document.createTextNode("logout");
     logoutBtn.appendChild(logoutTextNode);
     dashboardRef.appendChild(logoutBtn);
@@ -66,7 +67,7 @@ function dashboard(username) {
     // task div -- in startTask() function, append everything to .taskDiv
     const taskDiv = document.createElement("div");
     taskDiv.setAttribute("class", "taskDiv");
-    taskDiv.textContent = "tasks";
+    // taskDiv.textContent = "tasks";
     moduleContainer.appendChild(taskDiv);
     // const taskContainerDiv = document.createElement("div");
     // taskContainerDiv.setAttribute("id", "taskListDiv");
@@ -87,7 +88,6 @@ function dashboard(username) {
     // event div
     const eventDiv = document.createElement("div");
     eventDiv.setAttribute("class", "eventDiv");
-    eventDiv.textContent = "events";
     moduleContainer.appendChild(eventDiv);
 
     // users div
