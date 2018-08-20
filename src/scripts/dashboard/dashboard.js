@@ -65,14 +65,9 @@ function dashboard(username) {
     // task div -- in startTask() function, append everything to .taskDiv
     const taskDiv = document.createElement("div");
     taskDiv.setAttribute("class", "taskDiv");
-<<<<<<< HEAD
-    moduleContainer.appendChild(taskDiv);
-
-=======
     taskDiv.textContent = "Tasks";
     moduleContainer.appendChild(taskDiv);
    
->>>>>>> master
     // chat div
     const chatDiv = document.createElement("div");
     chatDiv.setAttribute("class", "chatDiv");

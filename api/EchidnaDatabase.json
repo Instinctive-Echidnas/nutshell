@@ -154,6 +154,36 @@
       "email": "nick",
       "username": "nick",
       "id": 31
+    },
+    {
+      "email": "boobie",
+      "username": "boobie",
+      "id": 32
+    },
+    {
+      "email": "nick",
+      "username": "nick",
+      "id": 33
+    },
+    {
+      "email": "samuel",
+      "username": "samuel",
+      "id": 34
+    },
+    {
+      "email": "boobar",
+      "username": "boobar",
+      "id": 35
+    },
+    {
+      "email": "berry1",
+      "username": "berry1",
+      "id": 36
+    },
+    {
+      "email": "nick",
+      "username": "nick",
+      "id": 37
     }
   ],
   "friends": [],
@@ -163,24 +193,6 @@
       "message": "What up Ma Dudes?",
       "date": 1534535109142,
       "id": 1
-    },
-    {
-      "userId": 4,
-      "message": "I am Da Queen",
-      "date": 1534535233140,
-      "id": 2
-    },
-    {
-      "userId": 5,
-      "message": "Do you Know De Whey?",
-      "date": 1534535266888,
-      "id": 3
-    },
-    {
-      "userId": 3,
-      "message": "IT FUCKING WORKS!",
-      "date": 1534536032020,
-      "id": 4
     }
   ],
   "events": [],
