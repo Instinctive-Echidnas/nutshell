@@ -25,6 +25,8 @@
 
 
 .chatDiv {
+    height:500px;
+    width: 500px;
     background-color: yellow;
     padding: 20px;
     border: 1px solid black;

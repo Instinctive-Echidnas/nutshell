@@ -1,7 +1,7 @@
-@import "chatStyle.css";
 @import 'loginStyle.css';
 @import 'dashboardStyle.css';
 @import 'taskstyles.css';
+@import "chatStyle.css";
 
 /* body {
  background-color: black;
