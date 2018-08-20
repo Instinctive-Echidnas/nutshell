@@ -51,7 +51,7 @@
 ### Application Instructions
 
 First, what the hell is an Echidna
-* go to google and type, 'define echidna'
+- going to google and typing, 'define echidna' results in, "a spiny insectivorous egg-laying mammal with a long snout and claws, native to Australia and New Guinea."
 
 * have node.js installed, as well as json-server, grunt, and browserify--and any dependencies
 * git clone https://github.com/Instinctive-Echidnas/nutshell.git
