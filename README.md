@@ -48,4 +48,14 @@
 
 - [ ] Login Page -- Nick
 
-PLACE APP INSTRUCTIONS HERE
+### Application Instructions
+
+First, what the hell is an Echidna
+* go to google and type, 'define echidna'
+
+* have node.js installed, as well as json-server, grunt, and browserify--and any dependencies
+* git clone https://github.com/Instinctive-Echidnas/nutshell.git
+* run an npm install in the directory with the package.json
+* navigate to lib folder and run grunt
+* navigate to api folder and run json-server -p 8088 -w EchidnaDatabase.json
+* navigate to dist folder with index.html and run hs -o
