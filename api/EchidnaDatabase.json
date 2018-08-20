@@ -34,16 +34,15 @@
       "email": "helen@gmail.com",
       "username": "helen",
       "id": 7
+    },
+    {
+      "email": "Something@something.net",
+      "username": "aegafg",
+      "id": 8
     }
   ],
   "friends": [],
   "messages": [
-    {
-      "userId": 3,
-      "message": "What up Ma Dudes?",
-      "date": 1534535109142,
-      "id": 1
-    },
     {
       "userId": 4,
       "message": "I am Da Queen",
