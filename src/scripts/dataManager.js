@@ -16,8 +16,8 @@ const APItasksContent = Object.create (null, {
 
     //get task from the API
         getTasks: {
-            value: () => {
-                return fetch("http://localhost:8088/tasks?taskStatus=true")
+            value: (id) => {
+                return fetch(`http://localhost:8088/tasks?taskStatus=true&userId=${id}`)
                 .then(response => response.json());
             }
         },

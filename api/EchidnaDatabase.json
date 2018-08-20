@@ -159,26 +159,45 @@
   "friends": [],
   "messages": [
     {
-      "userId": 2,
-      "message": "dzfadfadsf",
-      "date": 1534538436928,
+      "userId": 3,
+      "message": "What up Ma Dudes?",
+      "date": 1534535109142,
       "id": 1
     },
     {
-      "userId": 2,
-      "message": "xcadadsc",
-      "date": 1534687694334,
+      "userId": 4,
+      "message": "I am Da Queen",
+      "date": 1534535233140,
       "id": 2
+    },
+    {
+      "userId": 5,
+      "message": "Do you Know De Whey?",
+      "date": 1534535266888,
+      "id": 3
+    },
+    {
+      "userId": 3,
+      "message": "IT FUCKING WORKS!",
+      "date": 1534536032020,
+      "id": 4
     }
   ],
   "events": [],
   "tasks": [
     {
-      "userId": 2,
-      "task": "afdfa",
-      "taskGoalDate": "2018-08-15",
+      "userId": 6,
+      "task": "Random",
+      "taskGoalDate": "2018-08-30",
       "taskStatus": true,
       "id": 1
+    },
+    {
+      "userId": 6,
+      "task": "2nd task",
+      "taskGoalDate": "2018-08-30",
+      "taskStatus": true,
+      "id": 2
     }
   ]
 }

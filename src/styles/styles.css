@@ -2,6 +2,7 @@
 /* @import "chatStyle.css"; */
 @import 'loginStyle.css';
 @import 'dashboardStyle.css';
+@import 'taskstyles.css';
 
 #taskSaveButton {
     background-color: rgb(8, 170, 245);
@@ -12,4 +13,8 @@
     object-position: 50% 80%;
 
 }
+/* body {
+ background-color: black;
+ color: white;
+} */
 
