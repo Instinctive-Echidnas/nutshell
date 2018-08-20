@@ -1,17 +1,15 @@
 /**
- * Dashboard should require every individual module that we want displayed outside of login/welcome/registration page
+ * Purpose:  To tie together each resource in the DB and display it to DOM in an ordered manner
  */
 
-// i had to use ../chat as opposed to ./chat which it was
 const chat = require("../chat/chat.js");
 const chatListeners = require("../chat/chatListeners.js");
 const startTask = require("../tasks/task.js");
 const article = require("../article/article.js");
 const editedtask = require("../tasks/editedtask.js");
-
 const event = require("../events/event.js");
 
-// passing in the username from session storage for custom welcome
+// passing in the username from session storage for custom welcome message
 function dashboard(username) {
     // before I load dashboard, I need to clear the dom container in order to get rid of login/registration information when new user created
     const myDiv = document.createElement("div");
@@ -41,6 +39,19 @@ function dashboard(username) {
     // using username argument for custom welcome
     p.innerHTML = `<h2>Welcome to your dashboard, ${username}!</h2>`;
     document.querySelector(".dashboard").appendChild(p);
+
+    // logout button for dashboard needs event listener to clear session storage
+    const logoutBtn = document.createElement("button");
+    logoutBtn.setAttribute("class", "logoutButton");
+    const logoutTextNode = document.createTextNode("logout");
+    logoutBtn.appendChild(logoutTextNode);
+    dashboardRef.appendChild(logoutBtn);
+
+    logoutBtn.addEventListener("click", function logout() {
+        // clear session storage and call welcome() after clearing page
+        sessionStorage.removeItem("session");
+        location.reload();
+    });
 
     // create a container div for all of the modules to be targeted by flexbox styling
     const moduleContainer = document.createElement("div");
@@ -72,7 +83,6 @@ function dashboard(username) {
     // event div
     const eventDiv = document.createElement("div");
     eventDiv.setAttribute("class", "eventDiv");
-    eventDiv.textContent = "events";
     moduleContainer.appendChild(eventDiv);
 
     // users div
@@ -102,12 +112,8 @@ function dashboard(username) {
     event();
     startTask();
     article();
+    //_______________________________________________END OF CHAT__________________________________________
+
 }
-//_______________________________________________END OF CHAT__________________________________________
-
-
-
-//The task section 
-    
 
 module.exports = dashboard;

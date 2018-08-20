@@ -9,11 +9,13 @@
  *
  */
 
- // welcome.js requires
- const loginDataManager = require("./loginDataManager.js");
+// welcome.js requires
+const loginDataManager = require("./loginDataManager.js");
+// requiring dashboard so can invoke dashboard function in validateUser
+const dashboard = require("../dashboard/dashboard.js");
 
- // get a reference to DOM body element
- const documentBody = document.querySelector("body");
+// get a reference to DOM body element
+const documentBody = document.querySelector("body");
 
 // create a div to hold everything in index.html for login module
 const loginDiv = document.createElement("div");
@@ -115,8 +117,11 @@ loginBtnSubmit.addEventListener("click", function validate() {
         "email": document.querySelector("input[name=\"email\"]").value,
         "username": document.querySelector("input[name=\"username\"]").value,
     }
-    // see if we know who this user is and if so log them in.
-    loginDataManager.validateUser(user);
+    // see if we know who this user is and if so log them in.  if this returns false, we need to tell them to register
+    if (!(loginDataManager.validateUser(user))) {
+        // location.reload();
+        // alert("Please register an account first");
+    }
 });
 
 
@@ -126,14 +131,34 @@ loginBtnSubmit.addEventListener("click", function validate() {
  *
  */
 registerBtn.addEventListener("click", function validate() {
+    // make sure email or username is not an empty string before creating a new user
+    if (document.querySelector("input[name=\"email\"]").value === "") {
+        alert("email cannot be an empty string");
+        return 1;
+    }
+
+    if (document.querySelector("input[name=\"username\"]").value === "") {
+        alert("username cannot be an empty string");
+        return 1;
+    }
+
     // create a new customer account to validate and store if unique
     const user = {
         "email": document.querySelector("input[name=\"email\"]").value,
         "username": document.querySelector("input[name=\"username\"]").value,
     }
 
+    // something isn't working correctly here.  it would need to be fixed to make it so that when you register a new user, if they already exist, it doesn't auto log them in
     // validate the new user and test if unique
-    loginDataManager.validateUser(user);
+    // this code replaced if (!(userExists()) in welcome.js.  returns true or false based on whether or not user exists
+    if (!(loginDataManager.validateUser(user))) {
+        // console.log("not: ", loginDataManager.validateUser(user));
+        // userExists = false, we can create user.
+        loginDataManager.createUser(user);
+        location.reload();
+    } else {
+        return 1;
+    }
 });
 
 // export welcome function called in main.js
